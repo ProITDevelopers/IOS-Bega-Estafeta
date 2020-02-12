@@ -1,0 +1,90 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.4)
+  - KeychainSwift (19.0.0)
+  - Mapbox-iOS-SDK (5.5.0)
+  - MapboxCoreNavigation (0.38.1):
+    - MapboxDirections.swift (~> 0.30.0)
+    - MapboxMobileEvents (~> 0.9.5)
+    - MapboxNavigationNative (~> 6.2.1)
+    - Turf (~> 0.3.0)
+  - MapboxDirections.swift (0.30.0):
+    - Polyline (~> 4.2)
+  - MapboxMobileEvents (0.9.5)
+  - MapboxNavigation (0.38.1):
+    - Mapbox-iOS-SDK (~> 5.2)
+    - MapboxCoreNavigation (= 0.38.1)
+    - MapboxSpeech (~> 0.1.0)
+    - Solar (~> 2.1)
+  - MapboxNavigationNative (6.2.1)
+  - MapboxSpeech (0.1.1)
+  - MBProgressHUD (1.1.0)
+  - Polyline (4.2.1)
+  - SkeletonView (1.8.2)
+  - SkyFloatingLabelTextField (3.8.0)
+  - SocketRocket (0.5.1)
+  - Solar (2.1.0)
+  - StompClientLib (1.3.7):
+    - SocketRocket
+  - SwiftMessages (7.0.1):
+    - SwiftMessages/App (= 7.0.1)
+  - SwiftMessages/App (7.0.1)
+  - SwiftyJSON (5.0.0)
+  - Turf (0.3.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift (~> 6.5)
+  - KeychainSwift (~> 19.0)
+  - MapboxNavigation (~> 0.38.1)
+  - MBProgressHUD
+  - SkeletonView (~> 1.8.2)
+  - SkyFloatingLabelTextField (~> 3.8)
+  - StompClientLib
+  - SwiftMessages (~> 7.0)
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - KeychainSwift
+    - Mapbox-iOS-SDK
+    - MapboxCoreNavigation
+    - MapboxDirections.swift
+    - MapboxMobileEvents
+    - MapboxNavigation
+    - MapboxNavigationNative
+    - MapboxSpeech
+    - MBProgressHUD
+    - Polyline
+    - SkeletonView
+    - SkyFloatingLabelTextField
+    - SocketRocket
+    - Solar
+    - StompClientLib
+    - SwiftMessages
+    - SwiftyJSON
+    - Turf
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Mapbox-iOS-SDK: 7fa66a27e586acb14c7f32ec5a487343e3994451
+  MapboxCoreNavigation: a0b212c232dcea1954ed27078ea5e76620a02f58
+  MapboxDirections.swift: 1c6df988c24b753888ebd9976d7c98632501a413
+  MapboxMobileEvents: f6c21b2e59066c5c7093585de7c15adae3b63da0
+  MapboxNavigation: cb3ca44dabf351a9636e01f62664715c9c2e9eea
+  MapboxNavigationNative: 11dc22140f4698d3f26989f2b6379dc81ef0d4c1
+  MapboxSpeech: 59b3984d3f433a443d24acf53097f918c5cc70f9
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  Polyline: 0e9890790292741c8186201a536b6bb6a78d02dd
+  SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  StompClientLib: c9361dd2f8baa05998f61a79d4c5b5be0d93744b
+  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
+
+PODFILE CHECKSUM: 8dcf80391ed87dc9ac2522dc1519b9cab60f2035
+
+COCOAPODS: 1.8.4
