@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9kl-3Z-gzo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="7jl-rd-3wm">
+            <objects>
+                <viewController id="KgR-j3-RRK" customClass="LoginController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XrM-Hz-f7n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grupo 94" translatesAutoresizingMaskIntoConstraints="NO" id="trh-Aj-ZhL">
+                                <rect key="frame" x="117.5" y="138" width="179" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="trh-Aj-ZhL" secondAttribute="height" multiplier="1:1" id="E9v-e2-sw5"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="o9Q-7N-XeT">
+                                <rect key="frame" x="10" y="347" width="394" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retângulo 3" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-b2-gqd">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ceP-b2-gqd" secondAttribute="height" multiplier="1:1" id="OIT-jj-IHk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar Sessão" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pN-du-H0r">
+                                        <rect key="frame" x="68" y="20" width="326" height="20.5"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-jC-Tg2">
+                                <rect key="frame" x="20" y="427" width="374" height="275"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="z9O-Dl-TXQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="115"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYE-dW-Rgh" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="cjg-Uh-hMP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="mail"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="emailDidChange:" destination="KgR-j3-RRK" eventType="editingChanged" id="Q7h-Vf-Vla"/>
+                                                    <outlet property="delegate" destination="KgR-j3-RRK" id="6JS-ab-Wnk"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWd-Bk-lFG" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="65" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kaM-0r-0U3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Senha"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="senha"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KgR-j3-RRK" id="cAn-cW-LAe"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-qc-REO">
+                                        <rect key="frame" x="0.0" y="165" width="374" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSI-WD-2h9" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ANg-KM-ClO"/>
+                                                </constraints>
+                                                <state key="normal" title="Entrar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="15" height="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" name="FadeColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="entrar:" destination="KgR-j3-RRK" eventType="touchUpInside" id="88l-B5-XOM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdw-L0-Etm" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="RECUPERAR SENHA">
+                                                    <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="h16-wm-4fB" kind="custom" customClass="SwiftMessagesCenteredSegue" customModule="Bega" customModuleProvider="target" id="XGV-7X-dN1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="7E6-jC-Tg2" firstAttribute="top" secondItem="o9Q-7N-XeT" secondAttribute="bottom" constant="20" id="2ji-uv-vZ0"/>
+                            <constraint firstItem="o9Q-7N-XeT" firstAttribute="leading" secondItem="XrM-Hz-f7n" secondAttribute="leading" constant="10" id="Iak-os-VFF"/>
+                            <constraint firstItem="trh-Aj-ZhL" firstAttribute="top" secondItem="ejy-vW-9ab" secondAttribute="top" constant="50" id="J23-Gm-WfB"/>
+                            <constraint firstItem="o9Q-7N-XeT" firstAttribute="top" secondItem="trh-Aj-ZhL" secondAttribute="bottom" constant="30" id="V5B-c7-gvm"/>
+                            <constraint firstItem="trh-Aj-ZhL" firstAttribute="height" secondItem="XrM-Hz-f7n" secondAttribute="height" multiplier="0.2" id="Vpy-TT-AxG"/>
+                            <constraint firstItem="ejy-vW-9ab" firstAttribute="trailing" secondItem="o9Q-7N-XeT" secondAttribute="trailing" constant="10" id="WP9-Sp-hso"/>
+                            <constraint firstItem="trh-Aj-ZhL" firstAttribute="centerX" secondItem="XrM-Hz-f7n" secondAttribute="centerX" id="Xty-fE-Wbw"/>
+                            <constraint firstItem="7E6-jC-Tg2" firstAttribute="leading" secondItem="ejy-vW-9ab" secondAttribute="leading" constant="20" id="jld-tl-dqC"/>
+                            <constraint firstItem="ejy-vW-9ab" firstAttribute="trailing" secondItem="7E6-jC-Tg2" secondAttribute="trailing" constant="20" id="zoP-9z-F6Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ejy-vW-9ab"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CcH-ab-qHV">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="6RY-Zc-HZT"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="CYE-dW-Rgh" id="Zmf-ub-Nbq"/>
+                        <outlet property="senhaTextField" destination="eWd-Bk-lFG" id="Jbl-EO-3e7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ctd-mO-cg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-781.15942028985512" y="-861.16071428571422"/>
+        </scene>
+        <!--Recuperar Senha-->
+        <scene sceneID="LuU-H4-O5t">
+            <objects>
+                <viewController id="xhu-aU-9iR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u0d-6R-aBR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43c-Jt-Tzh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="769"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnail_AP_SLIDES_APP__01" translatesAutoresizingMaskIntoConstraints="NO" id="gbO-ka-88o">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="p4L-H5-dTH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hB4-ms-F5k">
+                                        <rect key="frame" x="20" y="105" width="374" height="150"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdk-6X-WFX" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Xet-Va-j0B"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Nº de Telefone"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="icons8-iphone-30"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8k0-9U-wDS">
+                                                <rect key="frame" x="0.0" y="100" width="374" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV4-ha-DAZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="w5K-b4-mUw"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Cancelar">
+                                                            <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ll-IG-wiJ" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                                        <rect key="frame" x="192" y="0.0" width="182" height="50"/>
+                                                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Gp3-ee-Pjp"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Confirmar">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="15" height="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" name="FadeColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="K02-a6-IIx" kind="show" id="bcd-WY-Dma"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="FundoCor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hB4-ms-F5k" secondAttribute="trailing" constant="20" id="4j8-5Y-5KY"/>
+                                    <constraint firstItem="gbO-ka-88o" firstAttribute="width" secondItem="43c-Jt-Tzh" secondAttribute="width" id="BZA-YN-K9g"/>
+                                    <constraint firstItem="gbO-ka-88o" firstAttribute="centerX" secondItem="43c-Jt-Tzh" secondAttribute="centerX" id="GDC-k4-eql"/>
+                                    <constraint firstItem="hB4-ms-F5k" firstAttribute="top" secondItem="gbO-ka-88o" secondAttribute="bottom" constant="45" id="Hkr-IX-5c7"/>
+                                    <constraint firstItem="hB4-ms-F5k" firstAttribute="leading" secondItem="43c-Jt-Tzh" secondAttribute="leading" constant="20" id="ahQ-yA-DB1"/>
+                                    <constraint firstItem="gbO-ka-88o" firstAttribute="top" secondItem="43c-Jt-Tzh" secondAttribute="top" id="ny6-um-quS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="43c-Jt-Tzh" firstAttribute="width" secondItem="u0d-6R-aBR" secondAttribute="width" id="BMN-2h-lFL"/>
+                            <constraint firstItem="43c-Jt-Tzh" firstAttribute="centerY" secondItem="u0d-6R-aBR" secondAttribute="centerY" constant="24.5" id="VEz-nq-os5"/>
+                            <constraint firstItem="43c-Jt-Tzh" firstAttribute="height" secondItem="u0d-6R-aBR" secondAttribute="height" multiplier="0.912946" constant="-49" id="YCr-wm-j67"/>
+                            <constraint firstItem="43c-Jt-Tzh" firstAttribute="centerX" secondItem="u0d-6R-aBR" secondAttribute="centerX" id="yE2-pq-KeJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gjy-8G-Fgm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recuperar Senha" id="b1i-QS-zp0">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="beT-8p-dNj"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="duy-vD-UGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="-861.16071428571422"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="Bdi-6g-GV4">
+            <objects>
+                <viewController id="hTe-e9-pB9" customClass="MapController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h2D-gj-c4S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOj-P1-zcj" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="747.5"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqz-VX-9mE" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="611.5" width="374" height="45"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Navegar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="BotaoNavegar:" destination="hTe-e9-pB9" eventType="touchUpInside" id="JOT-C0-CCA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="FundoCor"/>
+                                <constraints>
+                                    <constraint firstItem="Hqz-VX-9mE" firstAttribute="leading" secondItem="iOj-P1-zcj" secondAttribute="leading" constant="20" id="NVx-rf-L9s"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hqz-VX-9mE" secondAttribute="bottom" constant="91" id="iTK-Kp-BTF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hqz-VX-9mE" secondAttribute="trailing" constant="20" id="mtz-yw-7qd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="iOj-P1-zcj" firstAttribute="trailing" secondItem="ywo-5Q-1Q7" secondAttribute="trailing" id="7ff-fo-u45"/>
+                            <constraint firstItem="iOj-P1-zcj" firstAttribute="top" secondItem="ywo-5Q-1Q7" secondAttribute="top" id="BUR-qr-bfH"/>
+                            <constraint firstItem="Hqz-VX-9mE" firstAttribute="height" secondItem="h2D-gj-c4S" secondAttribute="height" multiplier="0.05" id="D5v-RY-gTW"/>
+                            <constraint firstAttribute="bottom" secondItem="iOj-P1-zcj" secondAttribute="bottom" id="QnC-IP-sAf"/>
+                            <constraint firstItem="iOj-P1-zcj" firstAttribute="leading" secondItem="ywo-5Q-1Q7" secondAttribute="leading" id="dIg-zs-wuQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ywo-5Q-1Q7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="VGd-Zb-CGB">
+                        <barButtonItem key="backBarButtonItem" title=" " id="d3X-vq-ksE"/>
+                        <rightBarButtonItems>
+                            <barButtonItem image="dots" style="done" id="eGJ-60-bgu">
+                                <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="Ec3-fz-7IN" kind="show" id="1dh-iN-WIz"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Encomendas" image="delivery" style="done" id="xAK-PS-7kO">
+                                <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="VerEncomendas:" destination="hTe-e9-pB9" id="ObD-vA-ORc"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="iOj-P1-zcj" id="y3E-a5-X4M"/>
+                        <segue destination="TzU-Ce-KTz" kind="show" identifier="teste" id="AQm-Ne-OvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kc-JR-VYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1049" y="1581"/>
+        </scene>
+        <!--Encomendas-->
+        <scene sceneID="bpL-4F-0gT">
+            <objects>
+                <viewController storyboardIdentifier="encomendas" id="TzU-Ce-KTz" customClass="EncomendasController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aR0-rm-6ik">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="iHE-nm-geT">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" name="FundoCor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="TzU-Ce-KTz" id="1cq-3d-1Bb"/>
+                                    <outlet property="delegate" destination="TzU-Ce-KTz" id="PSn-MP-hWy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="ucd-k8-roD" firstAttribute="trailing" secondItem="iHE-nm-geT" secondAttribute="trailing" id="2J4-gt-5sk"/>
+                            <constraint firstItem="iHE-nm-geT" firstAttribute="leading" secondItem="ucd-k8-roD" secondAttribute="leading" id="ilF-C4-MgE"/>
+                            <constraint firstItem="iHE-nm-geT" firstAttribute="top" secondItem="ucd-k8-roD" secondAttribute="top" id="sLc-pf-Cy0"/>
+                            <constraint firstItem="iHE-nm-geT" firstAttribute="bottom" secondItem="ucd-k8-roD" secondAttribute="bottom" id="u9T-b7-DeU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ucd-k8-roD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Encomendas" id="Twg-NO-HRj">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="Rgi-vV-Nwx">
+                            <rect key="frame" x="71" y="6" width="272" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="FundoCor"/>
+                            <segments>
+                                <segment title="Espera"/>
+                                <segment title="Andamento"/>
+                                <segment title="Entrega"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="ListaDeEncomendasSegementedControl:" destination="TzU-Ce-KTz" eventType="valueChanged" id="3OC-GS-Zti"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="estadosControl" destination="Rgi-vV-Nwx" id="EgS-GN-cqg"/>
+                        <outlet property="tableView" destination="iHE-nm-geT" id="hQd-sA-TWX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uZ-Q8-4lM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1049.2753623188407" y="2329.6875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7Q4-aX-OvG">
+            <objects>
+                <tabBarController id="0V4-H9-2Qd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3EJ-AZ-H7S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="FundoCor"/>
+                        <color key="selectedImageTintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSu-Dc-NKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="111"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="FAh-UK-ONk">
+            <objects>
+                <navigationController storyboardIdentifier="inicial" automaticallyAdjustsScrollViewInsets="NO" id="CFK-lM-r3F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mapa" image="marker" id="QSH-xo-GCV"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8G5-SW-l8u"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="wMl-5U-eDh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <color key="tintColor" name="BackColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hTe-e9-pB9" kind="relationship" relationship="rootViewController" id="hcD-Vb-QUU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Bt-SW-P0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1049" y="838"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hvw-UU-Mho">
+            <objects>
+                <navigationController storyboardIdentifier="login" automaticallyAdjustsScrollViewInsets="NO" id="9kl-3Z-gzo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wc4-3z-h2p">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KgR-j3-RRK" kind="relationship" relationship="rootViewController" id="EMz-4h-cJz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLx-Ng-ehb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1691.304347826087" y="-861.16071428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dWT-eR-zjf">
+            <objects>
+                <viewController id="K02-a6-IIx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lgv-CG-JvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-YF-E6v">
+                                <rect key="frame" x="0.0" y="61" width="414" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnail_AP_SLIDES_APP__01" translatesAutoresizingMaskIntoConstraints="NO" id="RSF-Ju-vOb">
+                                        <rect key="frame" x="0.0" y="10" width="414" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="MKU-Cw-qd8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="K9Z-if-Btw">
+                                        <rect key="frame" x="20" y="115" width="374" height="150"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Pq-6n-gv4" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="UYI-4M-DZ7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="send" textContentType="one-time-code"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Codigo de Confirmação"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="mail"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1Q-Yq-gSt" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="100" width="374" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="xRl-LQ-bUP"/>
+                                                </constraints>
+                                                <state key="normal" title="Confirmar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="15" height="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" name="FadeColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="mL5-Gp-6rL" kind="show" id="VyG-hF-Y0p"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="FundoCor"/>
+                                <constraints>
+                                    <constraint firstItem="RSF-Ju-vOb" firstAttribute="centerX" secondItem="TJ5-YF-E6v" secondAttribute="centerX" id="Qdz-40-QXM"/>
+                                    <constraint firstAttribute="trailing" secondItem="K9Z-if-Btw" secondAttribute="trailing" constant="20" id="cdG-DP-y3O"/>
+                                    <constraint firstItem="K9Z-if-Btw" firstAttribute="top" secondItem="RSF-Ju-vOb" secondAttribute="bottom" constant="45" id="dm9-ex-INj"/>
+                                    <constraint firstItem="K9Z-if-Btw" firstAttribute="leading" secondItem="TJ5-YF-E6v" secondAttribute="leading" constant="20" id="t63-v8-7Ya"/>
+                                    <constraint firstItem="RSF-Ju-vOb" firstAttribute="width" secondItem="TJ5-YF-E6v" secondAttribute="width" id="v6W-7I-k65"/>
+                                    <constraint firstItem="RSF-Ju-vOb" firstAttribute="top" secondItem="TJ5-YF-E6v" secondAttribute="top" constant="10" id="w0V-w5-hMQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="TJ5-YF-E6v" firstAttribute="centerX" secondItem="Lgv-CG-JvJ" secondAttribute="centerX" id="WPB-cg-N8G"/>
+                            <constraint firstItem="TJ5-YF-E6v" firstAttribute="centerY" secondItem="Lgv-CG-JvJ" secondAttribute="centerY" id="YdZ-Nf-8xe"/>
+                            <constraint firstItem="TJ5-YF-E6v" firstAttribute="width" secondItem="Lgv-CG-JvJ" secondAttribute="width" id="bzV-Uj-6KF"/>
+                            <constraint firstItem="TJ5-YF-E6v" firstAttribute="height" secondItem="Lgv-CG-JvJ" secondAttribute="height" multiplier="0.863839" id="gNp-bc-DB0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="12o-gq-Bb1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7FS-gM-t3C">
+                        <barButtonItem key="backBarButtonItem" title=" " id="sif-C5-WWa"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1X-ka-TEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705.7971014492755" y="-861.16071428571422"/>
+        </scene>
+        <!--Redefinir Senha-->
+        <scene sceneID="uUW-ry-6UU">
+            <objects>
+                <viewController id="mL5-Gp-6rL" customClass="NovaSenhaController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FVK-MC-Wl0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAB-vJ-ajw">
+                                <rect key="frame" x="0.0" y="61" width="414" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnail_AP_SLIDES_APP__01" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-t4-Fqg">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="7x8-pH-mKX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="F3D-3p-Tn6">
+                                        <rect key="frame" x="20" y="100" width="374" height="205"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0gP-7e-0CS">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Dm-fr-y3p" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="wBJ-3E-XBV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Nova Senha"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="senha"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                <color key="value" name="TextColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q98-Ud-W1N" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="LC2-PH-JMy"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Repetir Senha"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="senha"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                <color key="value" name="TextColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V0K-e2-vMo">
+                                                <rect key="frame" x="0.0" y="155" width="374" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI9-Os-BhV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="kZr-4u-QAv"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Cancelar">
+                                                            <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cancelarAlterarSenha:" destination="mL5-Gp-6rL" eventType="touchUpInside" id="EHe-Vm-h3j"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WER-Vo-h3u" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                                        <rect key="frame" x="192" y="0.0" width="182" height="50"/>
+                                                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="P91-mR-clu"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Confirmar">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="15" height="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" name="FadeColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="F3D-3p-Tn6" secondAttribute="trailing" constant="20" id="AUA-AN-wDX"/>
+                                    <constraint firstItem="cTH-t4-Fqg" firstAttribute="width" secondItem="MAB-vJ-ajw" secondAttribute="width" id="IZe-BY-WyP"/>
+                                    <constraint firstItem="F3D-3p-Tn6" firstAttribute="leading" secondItem="MAB-vJ-ajw" secondAttribute="leading" constant="20" id="MDQ-dK-sRf"/>
+                                    <constraint firstItem="cTH-t4-Fqg" firstAttribute="centerX" secondItem="MAB-vJ-ajw" secondAttribute="centerX" id="QbG-Oy-Lfm"/>
+                                    <constraint firstItem="cTH-t4-Fqg" firstAttribute="top" secondItem="MAB-vJ-ajw" secondAttribute="top" constant="20" symbolic="YES" id="ueI-Eg-Zo8"/>
+                                    <constraint firstItem="F3D-3p-Tn6" firstAttribute="top" secondItem="cTH-t4-Fqg" secondAttribute="bottom" constant="20" id="zd4-by-gUh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MAB-vJ-ajw" firstAttribute="centerY" secondItem="FVK-MC-Wl0" secondAttribute="centerY" id="2sw-yA-RNg"/>
+                            <constraint firstItem="MAB-vJ-ajw" firstAttribute="centerX" secondItem="FVK-MC-Wl0" secondAttribute="centerX" id="Hyl-dm-Mjl"/>
+                            <constraint firstItem="MAB-vJ-ajw" firstAttribute="width" secondItem="FVK-MC-Wl0" secondAttribute="width" id="OYV-Td-lC2"/>
+                            <constraint firstItem="MAB-vJ-ajw" firstAttribute="height" secondItem="FVK-MC-Wl0" secondAttribute="height" multiplier="0.863839" id="vBO-41-DaT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1bC-WY-Msc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Redefinir Senha" id="Btk-lz-BCW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLU-Vp-HgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2469.5652173913045" y="-861.16071428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iZm-7I-Cva">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h16-wm-4fB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c5t-k7-yZF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="FundoCor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xhu-aU-9iR" kind="relationship" relationship="rootViewController" id="rP9-th-9ur"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j67-PA-DgQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="-861"/>
+        </scene>
+        <!--Definições-->
+        <scene sceneID="L7v-CC-UYd">
+            <objects>
+                <viewController id="Ec3-fz-7IN" customClass="DefinicoesController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LkF-yG-ClG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="zvI-HU-ZfI">
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="713.5"/>
+                                <color key="backgroundColor" name="FundoCor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ec3-fz-7IN" id="tsZ-qx-dip"/>
+                                    <outlet property="delegate" destination="Ec3-fz-7IN" id="8gs-BE-gtE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="zvI-HU-ZfI" firstAttribute="top" secondItem="sdt-a4-HRz" secondAttribute="top" id="HVP-7k-GHb"/>
+                            <constraint firstItem="sdt-a4-HRz" firstAttribute="bottom" secondItem="zvI-HU-ZfI" secondAttribute="bottom" id="eU7-hg-uGu"/>
+                            <constraint firstItem="zvI-HU-ZfI" firstAttribute="leading" secondItem="sdt-a4-HRz" secondAttribute="leading" id="gEx-Zm-CmT"/>
+                            <constraint firstItem="sdt-a4-HRz" firstAttribute="trailing" secondItem="zvI-HU-ZfI" secondAttribute="trailing" id="o4i-nm-aMC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sdt-a4-HRz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Definições" id="0lU-Vf-Rlh">
+                        <barButtonItem key="backBarButtonItem" title=" " id="mpy-nP-slH"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="zvI-HU-ZfI" id="ZJ8-7i-J3n"/>
+                        <segue destination="6P2-2O-taq" kind="show" identifier="perfil" id="39A-7T-PuO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msL-m8-M1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="1580"/>
+        </scene>
+        <!--Perfil-->
+        <scene sceneID="Hg7-Pp-KxJ">
+            <objects>
+                <viewController id="6P2-2O-taq" customClass="PerfilController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z8l-zb-5nG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="YVS-US-71h" customClass="ImagemCircular" customModule="Bega" customModuleProvider="target">
+                                <rect key="frame" x="142" y="108" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="V5c-Ma-7qe"/>
+                                    <constraint firstAttribute="width" constant="130" id="VyB-A5-gO5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Va6-Te-iST">
+                                <rect key="frame" x="20" y="268" width="374" height="275"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jp-iH-xvc" customClass="View" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                        <subviews>
+                                            <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keU-bp-viJ" customClass="TextLabel" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FundoCor"/>
+                                        <constraints>
+                                            <constraint firstItem="keU-bp-viJ" firstAttribute="leading" secondItem="2Jp-iH-xvc" secondAttribute="leading" id="6KH-44-PwN"/>
+                                            <constraint firstAttribute="trailing" secondItem="keU-bp-viJ" secondAttribute="trailing" id="DAT-ww-v2W"/>
+                                            <constraint firstAttribute="height" constant="39" id="b36-T2-rND"/>
+                                            <constraint firstAttribute="bottom" secondItem="keU-bp-viJ" secondAttribute="bottom" id="kNT-Gm-vFU"/>
+                                            <constraint firstItem="keU-bp-viJ" firstAttribute="top" secondItem="2Jp-iH-xvc" secondAttribute="top" id="nqS-39-Rab"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="FadeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="15" height="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mj-b2-vAL" customClass="View" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="59" width="374" height="39"/>
+                                        <subviews>
+                                            <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHa-PU-4iV" customClass="TextLabel" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FundoCor"/>
+                                        <constraints>
+                                            <constraint firstItem="SHa-PU-4iV" firstAttribute="leading" secondItem="4Mj-b2-vAL" secondAttribute="leading" id="FIx-jG-0Od"/>
+                                            <constraint firstAttribute="trailing" secondItem="SHa-PU-4iV" secondAttribute="trailing" id="I0y-gC-yY8"/>
+                                            <constraint firstItem="SHa-PU-4iV" firstAttribute="top" secondItem="4Mj-b2-vAL" secondAttribute="top" id="XBR-Ec-1Kp"/>
+                                            <constraint firstAttribute="bottom" secondItem="SHa-PU-4iV" secondAttribute="bottom" id="c7H-LG-CF4"/>
+                                            <constraint firstAttribute="height" constant="39" id="ez8-BW-gJn"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="FadeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="15" height="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLq-yS-PDg" customClass="View" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118" width="374" height="39"/>
+                                        <subviews>
+                                            <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdv-tL-P3X" customClass="TextLabel" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FundoCor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Zdv-tL-P3X" secondAttribute="bottom" id="A3d-tb-bv6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zdv-tL-P3X" secondAttribute="trailing" id="DBf-E3-BPr"/>
+                                            <constraint firstItem="Zdv-tL-P3X" firstAttribute="leading" secondItem="WLq-yS-PDg" secondAttribute="leading" id="n2y-yK-vIA"/>
+                                            <constraint firstItem="Zdv-tL-P3X" firstAttribute="top" secondItem="WLq-yS-PDg" secondAttribute="top" id="rja-EZ-08N"/>
+                                            <constraint firstAttribute="height" constant="39" id="sJP-wv-Lif"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="FadeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="15" height="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9P-Nf-khr" customClass="View" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="177" width="374" height="39"/>
+                                        <subviews>
+                                            <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN2-Tf-iVk" customClass="TextLabel" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FundoCor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="eN2-Tf-iVk" secondAttribute="bottom" id="Jsb-pD-zc8"/>
+                                            <constraint firstItem="eN2-Tf-iVk" firstAttribute="top" secondItem="Q9P-Nf-khr" secondAttribute="top" id="dgI-ex-G47"/>
+                                            <constraint firstItem="eN2-Tf-iVk" firstAttribute="leading" secondItem="Q9P-Nf-khr" secondAttribute="leading" id="foy-hy-pTK"/>
+                                            <constraint firstAttribute="height" constant="39" id="mc1-h4-Lo6"/>
+                                            <constraint firstAttribute="trailing" secondItem="eN2-Tf-iVk" secondAttribute="trailing" id="qW5-UV-Ysg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="FadeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="15" height="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-AC-NB9" customClass="View" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="236" width="374" height="39"/>
+                                        <subviews>
+                                            <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n5-TQ-6Ug" customClass="TextLabel" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FundoCor"/>
+                                        <constraints>
+                                            <constraint firstItem="6n5-TQ-6Ug" firstAttribute="leading" secondItem="KGb-AC-NB9" secondAttribute="leading" id="3vd-Nt-ghk"/>
+                                            <constraint firstAttribute="trailing" secondItem="6n5-TQ-6Ug" secondAttribute="trailing" id="MIf-h7-L3C"/>
+                                            <constraint firstAttribute="height" constant="39" id="YTn-S7-i4v"/>
+                                            <constraint firstAttribute="bottom" secondItem="6n5-TQ-6Ug" secondAttribute="bottom" id="kdd-c8-Gh9"/>
+                                            <constraint firstItem="6n5-TQ-6Ug" firstAttribute="top" secondItem="KGb-AC-NB9" secondAttribute="top" id="zTY-ZM-M9j"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="FadeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="15" height="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LjA-Jh-pQ0">
+                                <rect key="frame" x="20" y="573" width="374" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfi-7F-ePg" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="58"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Alterar Senha">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="15" height="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="FadeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="osA-ln-BOE" kind="custom" customClass="SwiftMessagesCenteredSegue" customModule="Bega" customModuleProvider="target" id="07L-FD-kv6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIu-84-g3A" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="191" y="0.0" width="183" height="58"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Editar Perfil">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="15" height="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="FadeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="mqv-gQ-iFh" kind="custom" customClass="SwiftMessagesCenteredProfile" customModule="Bega" customModuleProvider="target" id="GHZ-8O-MqJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="YVS-US-71h" firstAttribute="centerX" secondItem="z8l-zb-5nG" secondAttribute="centerX" id="1Db-p2-Kkl"/>
+                            <constraint firstItem="LjA-Jh-pQ0" firstAttribute="leading" secondItem="ZyN-fp-J2b" secondAttribute="leading" constant="20" id="5b1-sa-ftE"/>
+                            <constraint firstItem="Va6-Te-iST" firstAttribute="top" secondItem="YVS-US-71h" secondAttribute="bottom" constant="30" id="72Y-SS-iSb"/>
+                            <constraint firstItem="YVS-US-71h" firstAttribute="top" secondItem="ZyN-fp-J2b" secondAttribute="top" constant="20" id="DjC-V9-eAE"/>
+                            <constraint firstItem="Va6-Te-iST" firstAttribute="leading" secondItem="ZyN-fp-J2b" secondAttribute="leading" constant="20" id="Hvu-jD-rYQ"/>
+                            <constraint firstItem="EIu-84-g3A" firstAttribute="height" secondItem="z8l-zb-5nG" secondAttribute="height" multiplier="0.065" id="bCl-ji-FOY"/>
+                            <constraint firstItem="ZyN-fp-J2b" firstAttribute="trailing" secondItem="Va6-Te-iST" secondAttribute="trailing" constant="20" id="bfU-vj-XLD"/>
+                            <constraint firstItem="LjA-Jh-pQ0" firstAttribute="top" secondItem="Va6-Te-iST" secondAttribute="bottom" constant="30" id="x3f-Rp-aWw"/>
+                            <constraint firstItem="ZyN-fp-J2b" firstAttribute="trailing" secondItem="LjA-Jh-pQ0" secondAttribute="trailing" constant="20" id="y7f-QY-ezS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZyN-fp-J2b"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Perfil" largeTitleDisplayMode="never" id="nrX-Sv-8JZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="veX-yV-bVu"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bilheteUser" destination="SHa-PU-4iV" id="Uss-yR-2Qk"/>
+                        <outlet property="emailUser" destination="6n5-TQ-6Ug" id="pzZ-dC-4wt"/>
+                        <outlet property="fotoUser" destination="YVS-US-71h" id="Rg9-zf-H8d"/>
+                        <outlet property="nomeUser" destination="keU-bp-viJ" id="rGq-Uq-BdF"/>
+                        <outlet property="sexoUser" destination="Zdv-tL-P3X" id="7ns-yt-ydh"/>
+                        <outlet property="telefoneUser" destination="eN2-Tf-iVk" id="dL4-ri-SuC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QqR-WA-oYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015.9420289855074" y="1579.6875"/>
+        </scene>
+        <!--Editar Perfil-->
+        <scene sceneID="3mB-0B-COS">
+            <objects>
+                <viewController id="jla-OR-EBL" customClass="EditarPerfilController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cIJ-ej-qTS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-fx-iUv">
+                                <rect key="frame" x="31" y="243.5" width="352" height="409"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fOr-bx-nN5">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="320"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDq-d0-qcN" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="m4g-fS-ltf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="mail"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fq6-T6-gIs" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="70" width="352" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="P9D-i6-WHd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="mail"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VRn-qF-omT" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="140" width="352" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="HJV-F5-OR4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="mail"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gk-lj-PfZ" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="210" width="352" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="8f2-f3-OVH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="mail"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-zi-4VC" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="280" width="352" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="yra-Ip-Y51"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Nº de Telefone"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="senha"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RYK-wz-oi5">
+                                        <rect key="frame" x="0.0" y="360" width="352" height="49"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-ue-2Bw" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="49"/>
+                                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Confirmar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="15" height="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" name="FadeColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ConfirmareEditarButton:" destination="jla-OR-EBL" eventType="touchUpInside" id="weW-mF-Kyg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aDr-ue-2Bw" firstAttribute="height" secondItem="kGt-fx-iUv" secondAttribute="height" multiplier="0.12" id="mu4-nq-OIN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="kGt-fx-iUv" firstAttribute="centerY" secondItem="cIJ-ej-qTS" secondAttribute="centerY" id="PhC-yq-bmD"/>
+                            <constraint firstItem="kGt-fx-iUv" firstAttribute="centerX" secondItem="cIJ-ej-qTS" secondAttribute="centerX" id="T5g-FO-oQa"/>
+                            <constraint firstItem="kGt-fx-iUv" firstAttribute="width" secondItem="cIJ-ej-qTS" secondAttribute="width" multiplier="0.85" id="xxi-VG-BBb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2YZ-Lz-iGD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Editar Perfil" id="XtA-0Y-qJi">
+                        <barButtonItem key="rightBarButtonItem" image="out" id="ZSe-K0-vOf">
+                            <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="FecharPopUpButton:" destination="jla-OR-EBL" id="XhM-Wn-LVN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="2gk-lj-PfZ" id="hBn-ew-bSQ"/>
+                        <outlet property="telefoneTextField" destination="XVI-zi-4VC" id="g2E-pK-mq5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fru-wE-Ka7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="1584"/>
+        </scene>
+        <!--Alterar Senha-->
+        <scene sceneID="Vq7-A4-wSY">
+            <objects>
+                <viewController id="osA-ln-BOE" customClass="AlterarSenhaController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LYz-Pe-lfx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-70-NCK">
+                                <rect key="frame" x="31" y="296" width="352" height="304"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tny-Tg-XME">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="240"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJH-EQ-AFA">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="6Xz-6U-5jy"/>
+                                                </constraints>
+                                                <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" image="out">
+                                                    <color key="titleColor" name="TextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="FecharPopUpButton:" destination="osA-ln-BOE" eventType="touchUpInside" id="p0t-Wd-nxr"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vis-Zu-M4S" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="45" width="352" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="6Qk-UY-ZYg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Senha Antiga"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="senha"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rjy-qz-HDh" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="100" width="352" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="P1Q-kk-EF1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Nova Senha"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="senha"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ALE-ym-DUD" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
+                                                <rect key="frame" x="0.0" y="155" width="352" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="cxK-Qh-uSH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Repetir Senha"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="senha"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" name="TextColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-ig-2a4">
+                                                <rect key="frame" x="0.0" y="210" width="352" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                <state key="normal" title="Ver Senha">
+                                                    <color key="titleColor" name="TextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="VerSenhaButton:" destination="osA-ln-BOE" eventType="touchUpInside" id="zYw-uM-HBV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0a5-Ne-3eR">
+                                        <rect key="frame" x="0.0" y="255" width="352" height="49"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXX-7O-A7j" customClass="Botao" customModule="Bega" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="49"/>
+                                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Confirmar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="15" height="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" name="FadeColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ConfirmarAlterarSenhaButton:" destination="osA-ln-BOE" eventType="touchUpInside" id="rHW-N8-l23"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wXX-7O-A7j" firstAttribute="height" secondItem="RBX-70-NCK" secondAttribute="height" multiplier="0.16" id="Xhq-xR-LFM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="FundoCor"/>
+                        <constraints>
+                            <constraint firstItem="RBX-70-NCK" firstAttribute="width" secondItem="LYz-Pe-lfx" secondAttribute="width" multiplier="0.85" id="Jmw-Ag-QkO"/>
+                            <constraint firstItem="RBX-70-NCK" firstAttribute="centerX" secondItem="LYz-Pe-lfx" secondAttribute="centerX" id="NCY-bK-Fsg"/>
+                            <constraint firstItem="RBX-70-NCK" firstAttribute="centerY" secondItem="LYz-Pe-lfx" secondAttribute="centerY" id="aVR-Kl-Db7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="guw-JV-pPw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alterar Senha" id="IK5-u7-pXw"/>
+                    <connections>
+                        <outlet property="novaSenhaTextField" destination="Rjy-qz-HDh" id="63v-ss-7Kb"/>
+                        <outlet property="repetirSenhaButton" destination="ALE-ym-DUD" id="bBJ-9V-AyJ"/>
+                        <outlet property="senhaAntigaTextField" destination="Vis-Zu-M4S" id="oBg-2R-5hk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToW-dn-6uF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="2330"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ejo-KY-gbN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mqv-gQ-iFh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zpp-wB-lB0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jla-OR-EBL" kind="relationship" relationship="rootViewController" id="jbZ-0g-gbs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uL4-g3-PUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.7391304347827" y="1583.7053571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Grupo 94" width="182" height="186"/>
+        <image name="Retângulo 3" width="6" height="30"/>
+        <image name="delivery" width="24" height="24"/>
+        <image name="dots" width="24" height="24"/>
+        <image name="icons8-iphone-30" width="30" height="30"/>
+        <image name="mail" width="90" height="90"/>
+        <image name="marker" width="24" height="24"/>
+        <image name="out" width="30" height="30"/>
+        <image name="senha" width="90" height="90"/>
+        <image name="thumbnail_AP_SLIDES_APP__01" width="300" height="92"/>
+        <image name="user" width="100" height="100"/>
+        <namedColor name="BackColor">
+            <color red="1" green="0.40000000596046448" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FadeColor">
+            <color red="0.66699999570846558" green="0.66699999570846558" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FundoCor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

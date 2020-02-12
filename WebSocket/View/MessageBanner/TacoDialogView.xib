@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JI3-gM-XBO" userLabel="Card View" customClass="TacoDialogView" customModule="Bega" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="389"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dp3-Ae-zep" userLabel="Background view" customClass="CornerRoundingView" customModule="SwiftMessages">
+                    <rect key="frame" x="30" y="10" width="540" height="369"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RJH-Fp-YDa" userLabel="Content view">
+                            <rect key="frame" x="30" y="30" width="480" height="309"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-So-dGA">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Irk-mj-bK8">
+                                    <rect key="frame" x="0.0" y="39.5" width="480" height="60"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aav-a1-ogq">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLT-bX-GJE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" text="🍔" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pFx-Py-lZQ" userLabel="Icon label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <bool key="isElement" value="NO"/>
+                                                            </accessibility>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="6yp-AT-q9O"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Nome da Loja" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAk-Zs-x2f">
+                                                            <rect key="frame" x="65" y="0.0" width="415" height="60"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <bool key="isElement" value="NO"/>
+                                                            </accessibility>
+                                                            <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                                            <color key="textColor" name="TextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="YAk-Zs-x2f" firstAttribute="leading" secondItem="pFx-Py-lZQ" secondAttribute="trailing" constant="15" id="0za-KZ-w39"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YAk-Zs-x2f" secondAttribute="bottom" id="5TB-rj-159"/>
+                                                        <constraint firstItem="pFx-Py-lZQ" firstAttribute="top" secondItem="xLT-bX-GJE" secondAttribute="top" id="Qeo-0t-HzA"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pFx-Py-lZQ" secondAttribute="bottom" id="Qxn-hu-B7m"/>
+                                                        <constraint firstAttribute="height" constant="60" id="Y1Y-No-jwq"/>
+                                                        <constraint firstItem="pFx-Py-lZQ" firstAttribute="leading" secondItem="xLT-bX-GJE" secondAttribute="leading" id="htv-Kw-h9G"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YAk-Zs-x2f" secondAttribute="trailing" id="u4s-eT-wmG"/>
+                                                        <constraint firstItem="YAk-Zs-x2f" firstAttribute="top" secondItem="xLT-bX-GJE" secondAttribute="top" id="y1I-oh-uhx"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Nome Cliente" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMT-Vh-S3z">
+                                    <rect key="frame" x="0.0" y="119.5" width="480" height="18.5"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <bool key="isElement" value="NO"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Quantidade" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hua-CV-CXW">
+                                    <rect key="frame" x="0.0" y="145.5" width="480" height="0.0"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <bool key="isElement" value="NO"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Tipo Pagamento" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-wl-pry">
+                                    <rect key="frame" x="0.0" y="158" width="480" height="18.5"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <bool key="isElement" value="NO"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Telefone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hd-tW-n8u">
+                                    <rect key="frame" x="0.0" y="196" width="480" height="18.5"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <bool key="isElement" value="NO"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9w-CI-YK7">
+                                    <rect key="frame" x="0.0" y="234.5" width="480" height="18.5"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <color key="textColor" name="TextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQy-Ze-Y6s" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                    <rect key="frame" x="0.0" y="260.5" width="480" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                            <color key="value" name="TextColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                            <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                            <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Código"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sa6-h7-6r8" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                    <rect key="frame" x="0.0" y="260.5" width="480" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                            <color key="value" name="TextColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                            <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                            <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Nº de Transação"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="x8I-RG-nBX">
+                                    <rect key="frame" x="0.0" y="273" width="480" height="36"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8Qt-TE-nPO">
+                                            <rect key="frame" x="229" y="0.0" width="251" height="36"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFi-Ik-klX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="Sair">
+                                                        <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="listaDeEncomendas" destination="JI3-gM-XBO" eventType="touchUpInside" id="RTP-CE-g3h"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-3I-y4b">
+                                                    <rect key="frame" x="45" y="0.0" width="106" height="36"/>
+                                                    <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                    <state key="normal" title="Mostrar Rota">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="mostrarRotaNoMapa:" destination="JI3-gM-XBO" eventType="touchUpInside" id="kyk-Iv-1gb"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVu-Ei-t6A">
+                                                    <rect key="frame" x="166" y="0.0" width="85" height="36"/>
+                                                    <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                    <state key="normal" title="Confirmar">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="confirmarEntrega" destination="JI3-gM-XBO" eventType="touchUpInside" id="N4X-71-QCV"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="FundoCor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="RJH-Fp-YDa" secondAttribute="bottom" constant="30" id="3t4-62-KuN"/>
+                        <constraint firstItem="RJH-Fp-YDa" firstAttribute="top" secondItem="dp3-Ae-zep" secondAttribute="top" constant="30" id="6rK-Yv-gKZ"/>
+                        <constraint firstAttribute="trailing" secondItem="RJH-Fp-YDa" secondAttribute="trailing" constant="30" id="dJi-po-g6O"/>
+                        <constraint firstItem="RJH-Fp-YDa" firstAttribute="leading" secondItem="dp3-Ae-zep" secondAttribute="leading" constant="30" id="zmH-aG-8Ij"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailingMargin" secondItem="dp3-Ae-zep" secondAttribute="trailing" constant="10" id="gGP-zK-6VU"/>
+                <constraint firstItem="dp3-Ae-zep" firstAttribute="leading" secondItem="JI3-gM-XBO" secondAttribute="leadingMargin" constant="10" id="gyP-aD-uO3"/>
+                <constraint firstAttribute="bottomMargin" secondItem="dp3-Ae-zep" secondAttribute="bottom" constant="10" id="le8-gK-lcY"/>
+                <constraint firstItem="dp3-Ae-zep" firstAttribute="top" secondItem="JI3-gM-XBO" secondAttribute="topMargin" constant="10" id="s15-z9-aHc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="bounceAnimationOffset">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="IDFatura" destination="Lqh-So-dGA" id="DQ2-BM-wMG"/>
+                <outlet property="backgroundView" destination="dp3-Ae-zep" id="ZiK-GN-SXH"/>
+                <outlet property="bodyLabel" destination="YAk-Zs-x2f" id="Koz-Jf-jUo"/>
+                <outlet property="codigoTextField" destination="IQy-Ze-Y6s" id="i9W-Sj-yh6"/>
+                <outlet property="confirmarButtons" destination="rVu-Ei-t6A" id="cXv-wX-t3N"/>
+                <outlet property="data" destination="U9w-CI-YK7" id="1Hg-5P-i6E"/>
+                <outlet property="iconLabel" destination="pFx-Py-lZQ" id="xKK-gA-Otu"/>
+                <outlet property="mostrarRotaButton" destination="hqh-3I-y4b" id="AlV-2x-YhL"/>
+                <outlet property="nomeCliente" destination="gMT-Vh-S3z" id="eJD-aS-E2R"/>
+                <outlet property="nomeLoja" destination="YAk-Zs-x2f" id="VXZ-5N-4Bj"/>
+                <outlet property="numeroTelefone" destination="2Hd-tW-n8u" id="Iue-oo-Y2R"/>
+                <outlet property="numeroTransacaoTextField" destination="Sa6-h7-6r8" id="V1N-ZR-y86"/>
+                <outlet property="quatidadePedido" destination="hua-CV-CXW" id="Krq-zz-sNH"/>
+                <outlet property="tipoPagamento" destination="RgR-wl-pry" id="CzG-q1-x7p"/>
+                <outlet property="titleLabel" destination="gMT-Vh-S3z" id="FWK-Tl-hc6"/>
+            </connections>
+            <point key="canvasLocation" x="304" y="662.96851574212894"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="FundoCor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
