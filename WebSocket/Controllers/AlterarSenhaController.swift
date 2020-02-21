@@ -26,7 +26,7 @@ class AlterarSenhaController: UIViewController {
     
     
     
-    @IBAction func FecharPopUpButton(_ sender: UIButton) {
+    @IBAction func FecharPopUpButton(_ sender: UIBarButtonItem) {
        dismiss(animated: true, completion: nil)
     }
     

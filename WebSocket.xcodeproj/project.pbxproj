@@ -167,8 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				CFFC428923C741AB00235DA1 /* LoginController.swift */,
-				CFFA2CE923C4866C005A9DB0 /* MapController.swift */,
 				CFFC428F23C76ED800235DA1 /* NovaSenhaController.swift */,
+				CFFA2CE923C4866C005A9DB0 /* MapController.swift */,
 				CF58538B23E0B7550084E069 /* EncomendasController.swift */,
 				CFB8EC6223E47495005EB1E3 /* DefinicoesController.swift */,
 				CF006E4A23EB4D15003EDD1B /* PerfilController.swift */,

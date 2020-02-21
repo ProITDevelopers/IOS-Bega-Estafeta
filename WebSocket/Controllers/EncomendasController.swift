@@ -19,7 +19,7 @@ class EncomendasController: UIViewController {
     private let urlEspera = "http://35.181.153.234:8085/api/encomendas/espera/estafeta"
     private let urlAndamento = "http://35.181.153.234:8085/api/encomendas/andamento/estafeta"
     private let urlEntregue = "http://35.181.153.234:8085/api/encomendas/estafeta"
-    
+    public lazy var refreshControl = UIRefreshControl()
     
     @IBOutlet weak var estadosControl: UISegmentedControl!
     
@@ -28,12 +28,14 @@ class EncomendasController: UIViewController {
     var coordenadasDelegate: CoordenadasEncomendasDelegate?
     
     
-    private var estado = "ESPERA"
+    private lazy var estado = "ESPERA"
+    private lazy var url = "http://35.181.153.234:8085/api/encomendas/espera/estafeta"
     private lazy var banner = MensagemBanner()
     private lazy var apiRequest = APIService()
     private var listaModel = [ListaModel]() {
         didSet {
             DispatchQueue.main.async { [weak self] in
+                self?.refreshControl.endRefreshing()
                 self?.tableView.reloadData()
             }
             
@@ -44,6 +46,7 @@ class EncomendasController: UIViewController {
         didSet{
             DispatchQueue.main.async { [weak self] in
                 if let erro = self?.errors {
+                    self?.refreshControl.endRefreshing()
                     self?.banner.MensagemErro(erro)
                 }
             }
@@ -56,6 +59,7 @@ class EncomendasController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mostrarRefresh()
         apiRequest.delegate = self
         apiRequest.performRequest(urlEspera)
         tableView.register(UINib.init(nibName: "EncomendasCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -72,21 +76,48 @@ class EncomendasController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             SwiftMessages.hideAll()
+            url = urlEspera
             apiRequest.performRequest(urlEspera)
             estado = "ESPERA"
             
         case 1:
             SwiftMessages.hideAll()
+            url = urlAndamento
             apiRequest.performRequest(urlAndamento)
             estado = "ANDAMENTO"
+            
         case 2:
             SwiftMessages.hideAll()
+            url = urlEntregue
             apiRequest.performRequest(urlEntregue)
             estado = "ENTREGUE"
         default:
             return
         }
     }
+    
+    
+    //MARK: Mostrar refresh
+    public func mostrarRefresh() {
+        // 1º verificar a versão do IOS
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        
+        // Configurar Refresh Control
+        refreshControl.addTarget(self, action: #selector(self.performRequest), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Buscando...", attributes: [NSAttributedString.Key.foregroundColor : #colorLiteral(red: 1, green: 0.3431279063, blue: 0, alpha: 1)])
+        refreshControl.tintColor = #colorLiteral(red: 1, green: 0.3431279063, blue: 0, alpha: 1)
+
+    }
+    
+    
+    @objc private func performRequest(){
+        apiRequest.performRequest(url)
+    }
+
     
     
     
@@ -139,8 +170,13 @@ protocol CoordenadasEncomendasDelegate {
 //MARK: Delegate ListaEncomendas
 
 extension EncomendasController: ListaEncomendasDelegate {
+    func didStartRefreshing() {
+       
+    }
+    
     func responseSucess() {
         DispatchQueue.main.async { [weak self] in
+            self?.refreshControl.endRefreshing()
             self?.banner.MensagemSucess()
         }
     }
@@ -156,7 +192,6 @@ extension EncomendasController: ListaEncomendasDelegate {
     
     func didUpdateListaEncomendas(_ apiService: APIService, _ listaEncomenda: [ListaModel]) {
         listaModel = listaEncomenda
-        
     }
     
 }

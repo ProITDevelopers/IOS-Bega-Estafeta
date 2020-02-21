@@ -48,6 +48,8 @@ class EditarPerfilController: UIViewController {
 
 
 extension EditarPerfilController: ListaEncomendasDelegate {
+    func didStartRefreshing() {}
+    
     func didUpdateListaEncomendas(_ apiService: APIService, _ listaEncomenda: [ListaModel]) {}
     
     func didFailWithError(_ error: Error) {

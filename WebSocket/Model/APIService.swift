@@ -11,12 +11,7 @@ import SwiftyJSON
 import Mapbox
 import KeychainSwift
 import MBProgressHUD
-
-//private enum KeysToApi: String {
-//    case token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicmlhbkBnbWFpbC5jb20iLCJwYXBlaXMiOlt7ImF1dGhvcml0eSI6IlJPTEVfRVNUQUYifV0sImlhdCI6MTU3ODMwNDUwOCwiZXhwIjoxNjA5ODYyMTA4fQ.Rre91kXkOQgl5GrGwn_gX29QXZJeHSujyYwRlNwBhuY"
-//}
-
-
+import PopMenu
 
 
 struct APIService {
@@ -27,10 +22,11 @@ struct APIService {
     private var coord: CLLocationCoordinate2D?
     private var banners = MensagemBanner()
     private let keychain = KeychainSwift()
+   
     
     //GET METHOD
-    func performRequest(_ url: String) {
-        
+    func performRequest(_ url: String, _ controller: EncomendasController?=nil) {
+        controller?.refreshControl.beginRefreshing()
         DispatchQueue.global(qos: .userInteractive).async {
             if let url = URL(string: url) , let token = self.keychain.get(Keys.token)  {
                 let session = URLSession(configuration: .default)
@@ -373,6 +369,43 @@ struct APIService {
     
     
     
+    
+    
+    
+    //MARK: PopMenu Function
+    func presentMenu(_ sender: UIBarButtonItem, _ viewController: MapController) {
+        let popMenu = PopMenuViewController(sourceView: sender, actions: [
+            PopMenuDefaultAction(title: "Meu Perfil", image: #imageLiteral(resourceName: "Grupo 94")),
+            PopMenuDefaultAction(title: "Sair", image: #imageLiteral(resourceName: "sair"))
+        ])
+        popMenu.delegate = viewController
+        popMenu.appearance.popMenuBackgroundStyle = .blurred(.dark)
+        popMenu.appearance.popMenuColor.actionColor = .tint(#colorLiteral(red: 1, green: 0.3431279063, blue: 0, alpha: 1))
+        popMenu.appearance.popMenuColor.backgroundColor = .solid(fill: UIColor.init(named: "FundoCor") ?? .white)
+        popMenu.appearance.popMenuItemSeparator = .fill(#colorLiteral(red: 1, green: 0.3431279063, blue: 0, alpha: 1), height: 1)
+        popMenu.appearance.popMenuActionHeight = 75
+        viewController.present(popMenu, animated: true, completion: nil)
+    }
+    
+    //Sair da sessão
+    public func sairDaSessão(_ banners: MensagemBanner, _ selfView: MapController){
+        banners.progressBar(selfView.view, "Saindo...")
+        for i in keychain.allKeys {
+            print(i)
+            keychain.delete(i)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            banners.hideProgress(selfView.view)
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let inicio = mainStoryBoard.instantiateViewController(withIdentifier: "login") as! UINavigationController
+            let _ = UIApplication.shared.keyWindow?.rootViewController = inicio
+            
+        }
+    }
+    
+    
+    
+    
 }
 
 
@@ -386,6 +419,7 @@ struct Keys {
 
 
 protocol ListaEncomendasDelegate {
+    func didStartRefreshing()
     func didUpdateListaEncomendas(_ apiService: APIService, _ listaEncomenda: [ListaModel])
     func didFailWithError(_ error: Error)
     func responseFailed(_ erroMessage: String)

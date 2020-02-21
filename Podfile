@@ -14,4 +14,5 @@ pod 'IQKeyboardManagerSwift', '~> 6.5'
 pod 'MBProgressHUD'
 pod 'KeychainSwift', '~> 19.0'
 pod 'SkeletonView', '~> 1.8.2'
+pod 'NewPopMenu', '~> 2.1'
 end

@@ -99,6 +99,8 @@ extension LoginController: UITextFieldDelegate {
 
 
 extension LoginController: ListaEncomendasDelegate {
+    func didStartRefreshing() {}
+    
     func responseSucess() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
             guard let selfView = self else {return}

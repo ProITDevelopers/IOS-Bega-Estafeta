@@ -15,6 +15,8 @@ import StompClientLib
 import SwiftyJSON
 import UserNotifications
 import MBProgressHUD
+import PopMenu
+import KeychainSwift //1º declara isso
 
 
 class MapController: UIViewController {
@@ -26,13 +28,29 @@ class MapController: UIViewController {
     private lazy var mensagemBanner = MensagemBanner()
     private lazy var annotation = MGLPointAnnotation()
     private lazy var apiService = APIService()
+    private lazy var bannners = MensagemBanner()
+    private lazy var keychain = KeychainSwift() //2º declara isso
+
     
     
     var coordenadaDestino = CLLocationCoordinate2D(latitude:  -8.827515/*-8.827554*/, longitude: 13.228986 /*13.229368*/)
     
     private lazy var socketClient = StompClientLib()
-    private let url = URL(string: "http://35.181.153.234:8085/api-entrega")
-    private let authorization = ["X-Authorization" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicmlhbkBnbWFpbC5jb20iLCJwYXBlaXMiOlt7ImF1dGhvcml0eSI6IlJPTEVfRVNUQUYifV0sImlhdCI6MTU3ODMwNDUwOCwiZXhwIjoxNjA5ODYyMTA4fQ.Rre91kXkOQgl5GrGwn_gX29QXZJeHSujyYwRlNwBhuY"]
+    
+    private let url = URL(string: "http://35.181.153.234:8086/api-entrega")
+    
+    
+    
+    // 3º depois isso
+    private var authorization: [String:String] {
+        if let token = self.keychain.get(Keys.token) {
+            return ["X-Authorization" : token]
+        }
+        return [:]
+    }
+        
+        
+       
     
     
     
@@ -44,19 +62,19 @@ class MapController: UIViewController {
         configuracaoNotification()
         setupMapView()
         abrirConexaoSocket()
-       // removerNoMapa()
+        // removerNoMapa()
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//    }
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(animated)
+    //    }
     
     
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        socketClient.disconnect()
-//    }
+    //    override func viewDidDisappear(_ animated: Bool) {
+    //        super.viewDidDisappear(animated)
+    //        socketClient.disconnect()
+    //    }
     
     
     
@@ -68,6 +86,14 @@ class MapController: UIViewController {
     @IBAction func VerEncomendas(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "teste", sender: self)
     }
+    
+    
+    @IBAction func MoreButton(_ sender: UIBarButtonItem) {
+        apiService.presentMenu(sender, self)
+    }
+    
+    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "teste" {
@@ -88,7 +114,7 @@ class MapController: UIViewController {
         mapView.showsUserLocation = true // mostra localizacao atual
         mapView.userLocation?.title = "Tu estas aqui"
         mapView.setUserTrackingMode(.follow, animated: true, completionHandler: nil) // segue o usuario
-       // mapView.styleURL = MGLStyle.darkStyleURL // fundo escuro
+        // mapView.styleURL = MGLStyle.darkStyleURL // fundo escuro
         
     }
     
@@ -129,7 +155,7 @@ class MapController: UIViewController {
         //NOTIFICACOES
         UNUserNotificationCenter.current().requestAuthorization(options:
             [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
-             // Handle Error
+                // Handle Error
         })
         UNUserNotificationCenter.current().delegate = self
     }
@@ -298,12 +324,12 @@ extension MapController: StompClientLibDelegate {
         print(json)
         guard let mensagem = json["mensagem"].string else {return print("body vazio")}
         guard let subtitle = json["dataHora"].string else {return print("subtitulo vazio")}
-         mostrarNotificacao(mensagem, subtitle)
+        mostrarNotificacao(mensagem, subtitle)
     }
     
     
     
-
+    
     
     
     //CONNECT
@@ -401,12 +427,32 @@ extension MapController: CoordenadasEncomendasDelegate {
         mostrarRotaNoMapa()
     }
     
-    
-    
-    
-  
-    
+}
 
-    
-    
+
+
+
+
+//MARK: Delegate popMenuViewController
+
+extension MapController: PopMenuViewControllerDelegate {
+
+    // This will be called when a menu action was selected
+    func popMenuDidSelectItem(_ popMenuViewController: PopMenuViewController, at index: Int) {
+        switch index {
+        case 0:
+            DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+                guard let selfView = self else {return}
+                selfView.performSegue(withIdentifier: "def", sender: selfView)
+            }
+        case 1:
+            DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+                guard let selfView = self else {return}
+                selfView.apiService.sairDaSessão(selfView.bannners, selfView)
+            }
+        default:
+            return
+        }
+    }
+
 }

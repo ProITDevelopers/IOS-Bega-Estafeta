@@ -69,7 +69,7 @@ struct MensagemBanner {
             config.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
             config.duration = .forever
             config.presentationStyle = .center
-            //config.keyboardTrackingView = KeyboardTrackingView()
+            config.keyboardTrackingView = KeyboardTrackingView()
             config.dimMode = .blur(style: .dark, alpha: 1.0, interactive: true)
             SwiftMessages.show(config: config, view: view)
             
