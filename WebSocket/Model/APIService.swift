@@ -120,7 +120,7 @@ struct APIService {
                         guard let responses = response as? HTTPURLResponse, (200...299).contains(responses.statusCode) else {
                             if let _ = response as? HTTPURLResponse {
                                 if let data = data, let datas = String(data: data, encoding: .utf8) {
-                                    print(datas)
+                                   // print(datas)
                                     self.parseJSONMessageError(data)
                                 }
                             }
@@ -131,7 +131,7 @@ struct APIService {
                         self.delegate?.responseSucess()
                         
                         if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                            print(dataString)
+                           // print(dataString)
                         }
                         
                         
@@ -245,6 +245,12 @@ struct APIService {
     }
     
     
+    
+    
+    
+    
+    
+    
     private func parseJSON(_ data: Data){
         let keychain = KeychainSwift()
         let decoder = JSONDecoder()
@@ -255,11 +261,10 @@ struct APIService {
                 keychain.set(token, forKey: Keys.token)
                 keychain.set(dataExpiracao, forKey: Keys.dataExp)
                 keychain.set(rules[0], forKey: Keys.rules)
-                
             }
             
         }catch{
-            print(error.localizedDescription)
+            self.delegate?.didFailWithError(error)
         }
     }
     
@@ -294,6 +299,7 @@ struct APIService {
             }
         }
     }
+    
     
     
     //PARSE JSON
@@ -340,8 +346,7 @@ struct APIService {
                         
                         guard let responses = response as? HTTPURLResponse, (200...299).contains(responses.statusCode) else {
                             if let _ = response as? HTTPURLResponse {
-                                if let data = data, let datas = String(data: data, encoding: .utf8) {
-                                    print(datas)
+                                if let data = data, let _ = String(data: data, encoding: .utf8) {
                                     self.parseJSONMessageError(data)
                                 }
                             }
@@ -351,8 +356,8 @@ struct APIService {
                         
                         self.delegate?.responseSucess()
                         
-                        if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                            print(dataString)
+                        if let data = data, let _ = String(data: data, encoding: .utf8) {
+                            self.parseJSONMessageError(data)
                         }
                         
                         
@@ -366,6 +371,78 @@ struct APIService {
             }
         }
     }
+    
+    
+    
+    //MARK: - Mudar Senha
+    public func confirmarTelefoneECodigo(_ url: String, _ dictionary: [String:Any], _ view: UIView){
+        banners.progressBar(view, "Entrando...")
+        DispatchQueue.global(qos: .userInteractive).async {
+            if let url = URL(string: url) {
+                let session = URLSession(configuration: .default)
+                var urlRequest = URLRequest(url: url)
+                urlRequest.httpMethod = "POST"
+                let json = dictionary
+                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                do{
+                    let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
+                    let task = session.uploadTask(with: urlRequest, from: jsonData) { (data, response, error) in
+                        if error != nil {
+                            guard let error = error else {return}
+                            self.delegate?.didFailWithError(error)
+                            return
+                        }
+                        
+                        guard let responses = response as? HTTPURLResponse, (200...299).contains(responses.statusCode) else {
+                            if let _ = response as? HTTPURLResponse {
+                                if let data = data, let _ = String(data: data, encoding: .utf8) {
+                                    self.parseJSONMessageError(data)
+                                }
+                            }
+                            return
+                        }
+                        
+                         self.delegate?.responseSucess()
+                        
+                        if let data = data, let _ = String(data: data, encoding: .utf8) {
+                           // self.parseJSON(data)
+                            //print(datas)
+                        }
+                        
+                        
+                    }
+                    task.resume()
+                    
+                }catch {
+                    self.delegate?.didFailWithError(error)
+                }
+                
+            }
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -387,6 +464,8 @@ struct APIService {
         viewController.present(popMenu, animated: true, completion: nil)
     }
     
+    
+    
     //Sair da sessão
     public func sairDaSessão(_ banners: MensagemBanner, _ selfView: MapController){
         banners.progressBar(selfView.view, "Saindo...")
@@ -403,6 +482,19 @@ struct APIService {
         }
     }
     
+    
+    
+    
+    //uialert message
+    public func messageAlert(_ viewController: UIViewController) {
+        let alert = UIAlertController(title: "Deseja cancelar?", message: "Tem certeza que deseja cancelar esta operação?", preferredStyle: .actionSheet)
+
+        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: { action in
+            viewController.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
+        viewController.present(alert, animated: true)
+    }
     
     
     

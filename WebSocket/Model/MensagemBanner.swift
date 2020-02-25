@@ -142,10 +142,10 @@ struct MensagemBanner {
     
     
     
-    func progressBar(_ view: UIView, _ texto: String){
+    func progressBar(_ view: UIView, _ texto: String, _ enable: Bool?=nil){
          let propressBar = MBProgressHUD.showAdded(to: view, animated: true)
          propressBar.mode = .indeterminate
-         propressBar.isUserInteractionEnabled = true
+         propressBar.isUserInteractionEnabled = enable ?? false
         // propressBar.backgroundView.style = .blur
          propressBar.contentColor = #colorLiteral(red: 1, green: 0.3431279063, blue: 0, alpha: 1)
        // propressBar.bezelView.color = UIColor.init(named: "FundoCor") ?? UIColor.white
@@ -156,6 +156,14 @@ struct MensagemBanner {
     
     func hideProgress(_ view: UIView){
          let _ = MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    
+    //uialert message
+    public func messageAlert(_ viewController: UIViewController, _ message: String) {
+        let alert = UIAlertController(title: "Alerta!", message: message, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        viewController.present(alert, animated: true)
     }
 
     

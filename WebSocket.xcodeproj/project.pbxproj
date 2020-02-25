@@ -31,6 +31,8 @@
 		CFB8EC6723E475F0005EB1E3 /* DefinicoesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB8EC6523E475EF005EB1E3 /* DefinicoesCell.xib */; };
 		CFB8EC6A23E47EEB005EB1E3 /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8EC6823E47EEB005EB1E3 /* PerfilCell.swift */; };
 		CFB8EC6B23E47EEB005EB1E3 /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB8EC6923E47EEB005EB1E3 /* PerfilCell.xib */; };
+		CFDE866A24004C8A002C0262 /* NumeroTelefoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE866924004C8A002C0262 /* NumeroTelefoneController.swift */; };
+		CFDE866C24005164002C0262 /* CodigoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDE866B24005164002C0262 /* CodigoController.swift */; };
 		CFFA2CEA23C4866C005A9DB0 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA2CE923C4866C005A9DB0 /* MapController.swift */; };
 		CFFC428A23C741AB00235DA1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC428923C741AB00235DA1 /* LoginController.swift */; };
 		CFFC428E23C7593C00235DA1 /* ButtonInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC428D23C7593C00235DA1 /* ButtonInspectable.swift */; };
@@ -69,6 +71,8 @@
 		CFB8EC6523E475EF005EB1E3 /* DefinicoesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefinicoesCell.xib; sourceTree = "<group>"; };
 		CFB8EC6823E47EEB005EB1E3 /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
 		CFB8EC6923E47EEB005EB1E3 /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
+		CFDE866924004C8A002C0262 /* NumeroTelefoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeroTelefoneController.swift; sourceTree = "<group>"; };
+		CFDE866B24005164002C0262 /* CodigoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodigoController.swift; sourceTree = "<group>"; };
 		CFFA2CE923C4866C005A9DB0 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		CFFC428923C741AB00235DA1 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CFFC428D23C7593C00235DA1 /* ButtonInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonInspectable.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				CFFC428923C741AB00235DA1 /* LoginController.swift */,
+				CFDE866924004C8A002C0262 /* NumeroTelefoneController.swift */,
+				CFDE866B24005164002C0262 /* CodigoController.swift */,
 				CFFC428F23C76ED800235DA1 /* NovaSenhaController.swift */,
 				CFFA2CE923C4866C005A9DB0 /* MapController.swift */,
 				CF58538B23E0B7550084E069 /* EncomendasController.swift */,
@@ -336,7 +342,9 @@
 				CFFA2CEA23C4866C005A9DB0 /* MapController.swift in Sources */,
 				CF25389D23F09E8800889D3C /* AlterarSenhaController.swift in Sources */,
 				CF4943FD23B0B21D004218ED /* AppDelegate.swift in Sources */,
+				CFDE866C24005164002C0262 /* CodigoController.swift in Sources */,
 				CF13759F23EE138B00C86253 /* EditarPerfilController.swift in Sources */,
+				CFDE866A24004C8A002C0262 /* NumeroTelefoneController.swift in Sources */,
 				CF4AFAA223D870B2002EBEAD /* ListaModel.swift in Sources */,
 				CFFC429023C76ED800235DA1 /* NovaSenhaController.swift in Sources */,
 				CFB8EC6023E41280005EB1E3 /* Functions.swift in Sources */,

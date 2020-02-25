@@ -25,7 +25,7 @@ class SwiftMessagesCenteredSegue: SwiftMessagesSegue {
         configure(layout: .centered)
         dimMode = .blur(style: .dark, alpha: 0.9, interactive: false)
         messageView.configureDropShadow()
-        keyboardTrackingView = KeyboardTrackingView()
+       // keyboardTrackingView = KeyboardTrackingView()
     }
 }
 

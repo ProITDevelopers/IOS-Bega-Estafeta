@@ -114,6 +114,8 @@ extension LoginController: ListaEncomendasDelegate {
     
     
     func didUpdateListaEncomendas(_ apiService: APIService, _ listaEncomenda: [ListaModel]) {}
+    
+    
     func didFailWithError(_ error: Error) {
         errorMessage = error.localizedDescription
     }

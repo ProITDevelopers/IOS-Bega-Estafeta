@@ -30,7 +30,7 @@ class MapController: UIViewController {
     private lazy var apiService = APIService()
     private lazy var bannners = MensagemBanner()
     private lazy var keychain = KeychainSwift() //2º declara isso
-
+    
     
     
     var coordenadaDestino = CLLocationCoordinate2D(latitude:  -8.827515/*-8.827554*/, longitude: 13.228986 /*13.229368*/)
@@ -48,9 +48,9 @@ class MapController: UIViewController {
         }
         return [:]
     }
-        
-        
-       
+    
+    
+    
     
     
     
@@ -79,7 +79,8 @@ class MapController: UIViewController {
     
     
     @IBAction func BotaoNavegar(_ sender: UIButton) {
-        mostrarRotaNoMapa()
+        // mostrarRotaNoMapa()
+        mapView.setUserTrackingMode(.follow, animated: true, completionHandler: nil)
     }
     
     
@@ -93,7 +94,7 @@ class MapController: UIViewController {
     }
     
     
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "teste" {
@@ -436,7 +437,7 @@ extension MapController: CoordenadasEncomendasDelegate {
 //MARK: Delegate popMenuViewController
 
 extension MapController: PopMenuViewControllerDelegate {
-
+    
     // This will be called when a menu action was selected
     func popMenuDidSelectItem(_ popMenuViewController: PopMenuViewController, at index: Int) {
         switch index {
@@ -454,5 +455,5 @@ extension MapController: PopMenuViewControllerDelegate {
             return
         }
     }
-
+    
 }

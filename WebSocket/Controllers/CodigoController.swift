@@ -1,8 +1,8 @@
 //
-//  NovaSenhaController.swift
+//  CodigoController.swift
 //  WebSocket
 //
-//  Created by Brian Hashirama on 1/9/20.
+//  Created by Brian Hashirama on 2/21/20.
 //  Copyright © 2020 PROIT-CONSULTING. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 import SkyFloatingLabelTextField
 import MBProgressHUD
 
-
-class NovaSenhaController: UIViewController {
+class CodigoController: UIViewController {
+    
     
     
     private var url = "http://35.181.153.234:8085/api/usuario/codigo"
@@ -24,16 +24,25 @@ class NovaSenhaController: UIViewController {
         navigationItem.setHidesBackButton(true, animated:true)
     }
     
-
-    @IBAction func cancelarAlterarSenha(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    
+    
+    @IBAction func fecharPopUp(_ sender: UIBarButtonItem) {
+        apiService.messageAlert(self)
     }
+    
+    @IBAction func ConfirmarTelefone(_ sender: UIButton) {
+        apiService.confirmarTelefoneECodigo(url, json, self.view)
+    }
+  
     
 
 }
 
 
-extension NovaSenhaController: ListaEncomendasDelegate {
+
+
+
+extension CodigoController: ListaEncomendasDelegate {
     func didStartRefreshing() {}
     
     func didUpdateListaEncomendas(_ apiService: APIService, _ listaEncomenda: [ListaModel]) {}
@@ -71,3 +80,4 @@ extension NovaSenhaController: ListaEncomendasDelegate {
     
     
 }
+

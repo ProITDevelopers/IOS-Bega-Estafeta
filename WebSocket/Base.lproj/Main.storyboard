@@ -24,16 +24,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="o9Q-7N-XeT">
-                                <rect key="frame" x="10" y="347" width="394" height="60"/>
+                                <rect key="frame" x="10" y="347" width="394" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retângulo 3" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-b2-gqd">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ceP-b2-gqd" secondAttribute="height" multiplier="1:1" id="OIT-jj-IHk"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar Sessão" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pN-du-H0r">
-                                        <rect key="frame" x="68" y="20" width="326" height="20.5"/>
+                                        <rect key="frame" x="38" y="5" width="356" height="20.5"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-jC-Tg2">
-                                <rect key="frame" x="20" y="427" width="374" height="275"/>
+                                <rect key="frame" x="20" y="397" width="374" height="275"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="z9O-Dl-TXQ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="115"/>
@@ -203,7 +203,7 @@
         <!--Recuperar Senha-->
         <scene sceneID="LuU-H4-O5t">
             <objects>
-                <viewController id="xhu-aU-9iR" sceneMemberID="viewController">
+                <viewController id="xhu-aU-9iR" customClass="NumeroTelefoneController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0d-6R-aBR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +226,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="Xet-Va-j0B"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                         <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -264,6 +264,9 @@
                                                         <state key="normal" title="Cancelar">
                                                             <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="Cancelar:" destination="xhu-aU-9iR" eventType="touchUpInside" id="3AY-sj-nes"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ll-IG-wiJ" customClass="Botao" customModule="Bega" customModuleProvider="target">
                                                         <rect key="frame" x="192" y="0.0" width="182" height="50"/>
@@ -292,7 +295,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="K02-a6-IIx" kind="show" id="bcd-WY-Dma"/>
+                                                            <action selector="ConfirmarTelefone:" destination="xhu-aU-9iR" eventType="touchUpInside" id="f1Q-dC-0d2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -322,7 +325,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Recuperar Senha" id="b1i-QS-zp0">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="beT-8p-dNj"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" image="out" id="qta-K3-cPM">
+                            <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="fecharPopUp:" destination="xhu-aU-9iR" id="hIq-q4-gWJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="K02-a6-IIx" kind="show" identifier="code" id="hMk-tK-9ue"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duy-vD-UGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,17 +351,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOj-P1-zcj" customClass="MGLMapView">
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqz-VX-9mE" customClass="Botao" customModule="Bega" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="620" width="374" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqz-VX-9mE" customClass="BotaoCircular" customModule="Bega" customModuleProvider="target">
+                                        <rect key="frame" x="334" y="605" width="60" height="60"/>
                                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Navegar">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="XMa-g0-vRX"/>
+                                            <constraint firstAttribute="height" constant="60" id="iuO-mn-gOO"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="mira">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="BotaoNavegar:" destination="hTe-e9-pB9" eventType="touchUpInside" id="JOT-C0-CCA"/>
                                         </connections>
@@ -357,9 +369,8 @@
                                 </subviews>
                                 <color key="backgroundColor" name="FundoCor"/>
                                 <constraints>
-                                    <constraint firstItem="Hqz-VX-9mE" firstAttribute="leading" secondItem="iOj-P1-zcj" secondAttribute="leading" constant="20" id="NVx-rf-L9s"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hqz-VX-9mE" secondAttribute="bottom" constant="91" id="iTK-Kp-BTF"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hqz-VX-9mE" secondAttribute="trailing" constant="20" id="mtz-yw-7qd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hqz-VX-9mE" secondAttribute="bottom" constant="91" id="tCq-9k-ZRD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hqz-VX-9mE" secondAttribute="trailing" constant="20" id="wdc-kT-LGi"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
@@ -370,7 +381,6 @@
                         <constraints>
                             <constraint firstItem="iOj-P1-zcj" firstAttribute="trailing" secondItem="ywo-5Q-1Q7" secondAttribute="trailing" id="7ff-fo-u45"/>
                             <constraint firstItem="iOj-P1-zcj" firstAttribute="top" secondItem="ywo-5Q-1Q7" secondAttribute="top" id="BUR-qr-bfH"/>
-                            <constraint firstItem="Hqz-VX-9mE" firstAttribute="height" secondItem="h2D-gj-c4S" secondAttribute="height" multiplier="0.05" id="D5v-RY-gTW"/>
                             <constraint firstAttribute="bottom" secondItem="iOj-P1-zcj" secondAttribute="bottom" id="QnC-IP-sAf"/>
                             <constraint firstItem="iOj-P1-zcj" firstAttribute="leading" secondItem="ywo-5Q-1Q7" secondAttribute="leading" id="dIg-zs-wuQ"/>
                         </constraints>
@@ -479,7 +489,7 @@
                     <navigationItem key="navigationItem" id="8G5-SW-l8u"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="wMl-5U-eDh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="FundoCor"/>
                         <color key="tintColor" name="BackColor"/>
@@ -512,10 +522,10 @@
             </objects>
             <point key="canvasLocation" x="-1691.304347826087" y="-861.16071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Codigo Controller-->
         <scene sceneID="dWT-eR-zjf">
             <objects>
-                <viewController id="K02-a6-IIx" sceneMemberID="viewController">
+                <viewController id="K02-a6-IIx" customClass="CodigoController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lgv-CG-JvJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -540,29 +550,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="send" textContentType="one-time-code"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
-                                                        <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Codigo de Confirmação"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
                                                         <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
                                                         <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="mail"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                         <color key="value" name="TextColor"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconWidth">
-                                                        <real key="value" value="30"/>
-                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Codigo de Confirmação"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1Q-Yq-gSt" customClass="Botao" customModule="Bega" customModuleProvider="target">
@@ -592,6 +589,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="ConfirmarTelefone:" destination="K02-a6-IIx" eventType="touchUpInside" id="Cd9-eD-pdX"/>
                                                     <segue destination="mL5-Gp-6rL" kind="show" id="VyG-hF-Y0p"/>
                                                 </connections>
                                             </button>
@@ -620,6 +618,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="7FS-gM-t3C">
                         <barButtonItem key="backBarButtonItem" title=" " id="sif-C5-WWa"/>
+                        <barButtonItem key="rightBarButtonItem" image="out" id="Tht-s5-ZQo">
+                            <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="fecharPopUp:" destination="K02-a6-IIx" id="wuM-To-jfg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1X-ka-TEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -812,7 +816,6 @@
         <!--Definições-->
         <scene sceneID="L7v-CC-UYd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="msL-m8-M1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Ec3-fz-7IN" customClass="DefinicoesController" customModule="Bega" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LkF-yG-ClG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -843,6 +846,7 @@
                         <outlet property="tableView" destination="zvI-HU-ZfI" id="ZJ8-7i-J3n"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msL-m8-M1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926" y="110"/>
         </scene>
@@ -1231,18 +1235,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-fx-iUv">
-                                <rect key="frame" x="31" y="243.5" width="352" height="409"/>
+                                <rect key="frame" x="31" y="229.5" width="352" height="437.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fOr-bx-nN5">
-                                        <rect key="frame" x="0.0" y="0.0" width="352" height="320"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="345"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDq-d0-qcN" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="0.0" y="0.0" width="352" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="m4g-fS-ltf"/>
+                                                    <constraint firstAttribute="height" constant="45" id="m4g-fS-ltf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                         <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1270,12 +1274,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fq6-T6-gIs" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="0.0" y="70" width="352" height="40"/>
+                                                <rect key="frame" x="0.0" y="75" width="352" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="P9D-i6-WHd"/>
+                                                    <constraint firstAttribute="height" constant="45" id="P9D-i6-WHd"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                         <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1303,12 +1307,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VRn-qF-omT" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="0.0" y="140" width="352" height="40"/>
+                                                <rect key="frame" x="0.0" y="150" width="352" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="HJV-F5-OR4"/>
+                                                    <constraint firstAttribute="height" constant="45" id="HJV-F5-OR4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                         <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1336,9 +1340,9 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gk-lj-PfZ" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="0.0" y="210" width="352" height="40"/>
+                                                <rect key="frame" x="0.0" y="225" width="352" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="8f2-f3-OVH"/>
+                                                    <constraint firstAttribute="height" constant="45" id="8f2-f3-OVH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
@@ -1369,12 +1373,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-zi-4VC" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="0.0" y="280" width="352" height="40"/>
+                                                <rect key="frame" x="0.0" y="300" width="352" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="yra-Ip-Y51"/>
+                                                    <constraint firstAttribute="height" constant="45" id="yra-Ip-Y51"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedIconColor">
                                                         <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1404,10 +1408,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RYK-wz-oi5">
-                                        <rect key="frame" x="0.0" y="360" width="352" height="49"/>
+                                        <rect key="frame" x="0.0" y="385" width="352" height="52.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-ue-2Bw" customClass="Botao" customModule="Bega" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="352" height="49"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="52.5"/>
                                                 <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Confirmar">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1458,7 +1462,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bilheteTextField" destination="Fq6-T6-gIs" id="rMt-r2-tB3"/>
                         <outlet property="emailTextField" destination="2gk-lj-PfZ" id="hBn-ew-bSQ"/>
+                        <outlet property="generoTextField" destination="VRn-qF-omT" id="UNq-Cn-Kbs"/>
+                        <outlet property="nomeTextField" destination="sDq-d0-qcN" id="azF-Aa-sWE"/>
                         <outlet property="telefoneTextField" destination="XVI-zi-4VC" id="g2E-pK-mq5"/>
                     </connections>
                 </viewController>
@@ -1475,10 +1482,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-70-NCK">
-                                <rect key="frame" x="31" y="303.5" width="352" height="289"/>
+                                <rect key="frame" x="31" y="321.5" width="352" height="253"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tny-Tg-XME">
-                                        <rect key="frame" x="0.0" y="0.0" width="352" height="225"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="195"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJH-EQ-AFA">
                                                 <rect key="frame" x="0.0" y="-30" width="352" height="30"/>
@@ -1507,7 +1514,7 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
                                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Senha Antiga"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Senha Atual"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -1593,7 +1600,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-ig-2a4">
-                                                <rect key="frame" x="0.0" y="165" width="352" height="60"/>
+                                                <rect key="frame" x="0.0" y="165" width="352" height="30"/>
                                                 <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" image="verSenha">
                                                     <color key="titleColor" name="TextColor"/>
@@ -1605,10 +1612,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0a5-Ne-3eR">
-                                        <rect key="frame" x="0.0" y="240" width="352" height="49"/>
+                                        <rect key="frame" x="0.0" y="210" width="352" height="43"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXX-7O-A7j" customClass="Botao" customModule="Bega" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="352" height="49"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="43"/>
                                                 <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Confirmar">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1716,6 +1723,7 @@
         <image name="icons8-parte-traseira-de-cartão-de-banco-30" width="30" height="30"/>
         <image name="mail" width="90" height="90"/>
         <image name="marker" width="24" height="24"/>
+        <image name="mira" width="30" height="30"/>
         <image name="out" width="30" height="30"/>
         <image name="senha" width="90" height="90"/>
         <image name="thumbnail_AP_SLIDES_APP__01" width="300" height="92"/>
