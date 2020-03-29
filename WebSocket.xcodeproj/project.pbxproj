@@ -51,7 +51,7 @@
 		CF1AD03B23E1D77E0081C4C8 /* EncomendasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncomendasCell.swift; sourceTree = "<group>"; };
 		CF1AD03C23E1D77E0081C4C8 /* EncomendasCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EncomendasCell.xib; sourceTree = "<group>"; };
 		CF25389C23F09E8800889D3C /* AlterarSenhaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterarSenhaController.swift; sourceTree = "<group>"; };
-		CF4943F923B0B21D004218ED /* Bega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bega.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF4943F923B0B21D004218ED /* Bega Estafeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bega Estafeta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4943FC23B0B21D004218ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4943FE23B0B21D004218ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF49440323B0B21D004218ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		CF4943FA23B0B21D004218ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF4943F923B0B21D004218ED /* Bega.app */,
+				CF4943F923B0B21D004218ED /* Bega Estafeta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 				CF4943F523B0B21D004218ED /* Sources */,
 				CF4943F623B0B21D004218ED /* Frameworks */,
 				CF4943F723B0B21D004218ED /* Resources */,
-				069FB9DB9757F503C1AA1F37 /* [CP] Embed Pods Frameworks */,
+				DDAA662218265BC940ABBD75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,7 +234,7 @@
 			);
 			name = WebSocket;
 			productName = WebSocket;
-			productReference = CF4943F923B0B21D004218ED /* Bega.app */;
+			productReference = CF4943F923B0B21D004218ED /* Bega Estafeta.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -288,23 +288,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		069FB9DB9757F503C1AA1F37 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebSocket/Pods-WebSocket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebSocket/Pods-WebSocket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebSocket/Pods-WebSocket-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		74C6D0E1664D9C4B48DABA08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,6 +308,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDAA662218265BC940ABBD75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebSocket/Pods-WebSocket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebSocket/Pods-WebSocket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebSocket/Pods-WebSocket-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -439,6 +439,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -492,6 +493,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -509,8 +511,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "proit-consulting.Bega";
-				PRODUCT_NAME = Bega;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proit.BegaEstafeta;
+				PRODUCT_NAME = "Bega Estafeta";
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -529,8 +532,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "proit-consulting.Bega";
-				PRODUCT_NAME = Bega;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proit.BegaEstafeta;
+				PRODUCT_NAME = "Bega Estafeta";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

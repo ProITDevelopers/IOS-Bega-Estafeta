@@ -26,7 +26,7 @@ class PerfilController: UIViewController {
     private lazy var apiService = APIService()
     private lazy var banner = MensagemBanner()
     private lazy var  keychain = KeychainSwift()
-    private let urlUser = "http://35.181.153.234:8085/api/usuario/perfil"
+    private let urlUser = "https://motoboyentrega.begaentrega.com/api/usuario/perfil"
     
     private var dados = PerfilModel() {
         didSet {
@@ -61,7 +61,7 @@ class PerfilController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurarNavigationBar()
-        view.showAnimatedGradientSkeleton(transition: .crossDissolve(0.25))
+        self.view.showAnimatedGradientSkeleton(transition: .crossDissolve(0.25))
         apiService.dataSourcePerfil = self
         apiService.mostrarDadosUser(urlUser)
     }

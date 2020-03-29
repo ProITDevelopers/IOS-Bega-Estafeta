@@ -15,7 +15,7 @@ class EditarPerfilController: UIViewController {
     
     
     
-    private let url = "http://35.181.153.234:8085/api/estafeta"
+    private let url = "https://motoboyentrega.begaentrega.com/api/estafeta"
     private lazy var apiService = APIService()
     private lazy var banners = MensagemBanner()
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!

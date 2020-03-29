@@ -37,34 +37,32 @@ class MapController: UIViewController {
     
     private lazy var socketClient = StompClientLib()
     
-    private let url = URL(string: "http://35.181.153.234:8086/api-entrega")
+    private let url = URL(string: "https://motoboy.begaentrega.com/api-entrega")
     
     
     
     // 3º depois isso
     private var authorization: [String:String] {
         if let token = self.keychain.get(Keys.token) {
+            
             return ["X-Authorization" : token]
         }
         return [:]
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configuracaoNotification()
         setupMapView()
         abrirConexaoSocket()
+        
         // removerNoMapa()
         
     }
+    
+    
     
     //    override func viewWillAppear(_ animated: Bool) {
     //        super.viewWillAppear(animated)
@@ -122,6 +120,7 @@ class MapController: UIViewController {
     
     //abrir conexao no socket
     private func abrirConexaoSocket() {
+
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url!), delegate: self, connectionHeaders: authorization)
     }
     
@@ -322,7 +321,7 @@ extension MapController: StompClientLibDelegate {
     func stompClient(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, akaStringBody stringBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
         guard let jsonBody = jsonBody else {return print("json vazio")}
         let json = JSON(jsonBody)
-        print(json)
+       // print(json)
         guard let mensagem = json["mensagem"].string else {return print("body vazio")}
         guard let subtitle = json["dataHora"].string else {return print("subtitulo vazio")}
         mostrarNotificacao(mensagem, subtitle)
@@ -335,6 +334,7 @@ extension MapController: StompClientLibDelegate {
     
     //CONNECT
     func stompClientDidConnect(client: StompClientLib!) {
+        print("conectou")
         socketClient.subscribe(destination: "/user/topic/notificacoes")
     }
     
@@ -342,7 +342,9 @@ extension MapController: StompClientLibDelegate {
     
     func stompClientDidDisconnect(client: StompClientLib!) {}
     func serverDidSendReceipt(client: StompClientLib!, withReceiptId receiptId: String) {}
-    func serverDidSendError(client: StompClientLib!, withErrorMessage description: String, detailedErrorMessage message: String?) {}
+    func serverDidSendError(client: StompClientLib!, withErrorMessage description: String, detailedErrorMessage message: String?) {
+        bannners.MensagemErro("Stomp: \(description.uppercased())!")
+    }
     func serverDidSendPing() {}
     
     

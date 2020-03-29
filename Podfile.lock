@@ -20,11 +20,11 @@ PODS:
   - MBProgressHUD (1.2.0)
   - NewPopMenu (2.1.2)
   - Polyline (4.2.1)
-  - SkeletonView (1.8.5)
+  - SkeletonView (1.8.6)
   - SkyFloatingLabelTextField (3.8.0)
   - SocketRocket (0.5.1)
   - Solar (2.1.0)
-  - StompClientLib (1.3.7):
+  - StompClientLib (1.3.8):
     - SocketRocket
   - SwiftMessages (7.0.1):
     - SwiftMessages/App (= 7.0.1)
@@ -80,15 +80,15 @@ SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
   Polyline: 0e9890790292741c8186201a536b6bb6a78d02dd
-  SkeletonView: 3a8d8dd241eaa7e7bb3744bc000fed94fcd69823
+  SkeletonView: 0bf463145522c0c551b76a829b397e2a15a16d46
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
-  StompClientLib: c9361dd2f8baa05998f61a79d4c5b5be0d93744b
+  StompClientLib: c411634ea4b53d46cd2a5b76b8c80d8d23b835b4
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
 
-PODFILE CHECKSUM: 7f9639adfc479572ee12730f3d7e56171aa0d50c
+PODFILE CHECKSUM: 17bc0601281ad846c5f9f9f7f44fb0945acc2dd9
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

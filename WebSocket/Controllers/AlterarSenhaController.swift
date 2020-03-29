@@ -15,7 +15,7 @@ class AlterarSenhaController: UIViewController {
     @IBOutlet weak var senhaAntigaTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var novaSenhaTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var repetirSenhaButton: SkyFloatingLabelTextFieldWithIcon!
-    private var url = "http://35.181.153.234:8085/api/usuario/palavrapasse"
+    private var url = "https://motoboyentrega.begaentrega.com/api/usuario/palavrapasse"
     private lazy var apiService = APIService()
     private lazy var banners = MensagemBanner()
     private var iconClick = false
