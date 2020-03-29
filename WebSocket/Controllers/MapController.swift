@@ -36,15 +36,13 @@ class MapController: UIViewController {
     var coordenadaDestino = CLLocationCoordinate2D(latitude:  -8.827515/*-8.827554*/, longitude: 13.228986 /*13.229368*/)
     
     private lazy var socketClient = StompClientLib()
-    
-    private let url = URL(string: "https://motoboy.begaentrega.com/api-entrega")
+    private var url = URL(string: "https://motoboy.begaentrega.com/api-entrega/websocket")
     
     
     
     // 3º depois isso
     private var authorization: [String:String] {
         if let token = self.keychain.get(Keys.token) {
-            
             return ["X-Authorization" : token]
         }
         return [:]
@@ -120,7 +118,7 @@ class MapController: UIViewController {
     
     //abrir conexao no socket
     private func abrirConexaoSocket() {
-
+        
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url!), delegate: self, connectionHeaders: authorization)
     }
     

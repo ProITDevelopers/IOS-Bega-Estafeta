@@ -5,7 +5,7 @@ target 'WebSocket' do
   use_frameworks!
 
   # Pods for WebSocket
-pod "StompClientLib"
+pod 'StompClientLib'
 pod 'SwiftyJSON'
 pod 'MapboxNavigation', '~> 0.38.1'
 pod 'SkyFloatingLabelTextField', '~> 3.8'
