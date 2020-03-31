@@ -119,7 +119,7 @@ struct APIService {
                         
                         guard let responses = response as? HTTPURLResponse, (200...299).contains(responses.statusCode) else {
                             if let _ = response as? HTTPURLResponse {
-                                if let data = data, let datas = String(data: data, encoding: .utf8) {
+                                if let data = data, let _ = String(data: data, encoding: .utf8) {
                                    // print(datas)
                                     self.parseJSONMessageError(data)
                                 }
@@ -130,7 +130,7 @@ struct APIService {
                         
                         self.delegate?.responseSucess()
                         
-                        if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                        if let data = data, let _ = String(data: data, encoding: .utf8) {
                            // print(dataString)
                         }
                         
@@ -173,20 +173,30 @@ struct APIService {
         banners.bannerDelegate = selfView
         switch estado {
         case "ESPERA":
+            
+            if CLLocationCoordinate2DIsValid(coord!) {
+                
+            }
+            
+            
             banners.detalhesDaEncomenda(listaModel[indexPath.row])
             coord = CLLocationCoordinate2D(latitude: listaModel[indexPath.row].latitudeOrigem ?? 0.0, longitude: listaModel[indexPath.row].longitudeOrigem ?? 0.0)
              guard let coord = coord else {return}
              coordenadasDelegate?.atualizarCoordenadas(coord)
+            
         case "ANDAMENTO":
+            coord = CLLocationCoordinate2D(latitude: listaModel[indexPath.row].latitudeDestino ?? 0.0, longitude: listaModel[indexPath.row].longitudeDestino ?? 0.0)
+            
+           // verifica se as coordenadas sao aceitaveis
+                guard let coord = coord else {return}
+                coordenadasDelegate?.atualizarCoordenadas(coord)
+                if listaModel[indexPath.row].tipoPagamento == "WALLET" {
+                    banners.detalhesDaEncomenda(listaModel[indexPath.row], false, nil)
+                }else if listaModel[indexPath.row].tipoPagamento == "TPA" {
+                    banners.detalhesDaEncomenda(listaModel[indexPath.row], false, false)
+                }
+    
 
-            coord = CLLocationCoordinate2D(latitude: listaModel[indexPath.row ].latitudeDestino ?? 0.0, longitude: listaModel[indexPath.row ].longitudeDestino ?? 0.0)
-            guard let coord = coord else {return}
-            coordenadasDelegate?.atualizarCoordenadas(coord)
-            if listaModel[indexPath.row].tipoPagamento == "WALLET" {
-                banners.detalhesDaEncomenda(listaModel[indexPath.row], false, nil)
-            }else if listaModel[indexPath.row].tipoPagamento == "TPA" {
-                banners.detalhesDaEncomenda(listaModel[indexPath.row], false, false)
-            }
         case "ENTREGUE":
             banners.detalhesDaEncomenda(listaModel[indexPath.row],nil,nil,true)
         default:

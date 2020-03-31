@@ -38,12 +38,17 @@ class MapController: UIViewController {
     private lazy var socketClient = StompClientLib()
     private var url = URL(string: "https://motoboy.begaentrega.com/api-entrega/websocket")
     
-    
+    var mensagem = ""
+    var firstTime = true
     
     // 3º depois isso
     private var authorization: [String:String] {
         if let token = self.keychain.get(Keys.token) {
-            return ["X-Authorization" : token]
+            return [
+                "X-Authorization" : token,
+                "heart-beat" : "0,10000"
+            
+            ]
         }
         return [:]
     }
@@ -51,12 +56,19 @@ class MapController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configuracaoNotification()
         setupMapView()
         abrirConexaoSocket()
         
         // removerNoMapa()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if firstTime ==  false {
+            self.bannners.MensagemErro(mensagem)
+        }
         
     }
     
@@ -118,7 +130,6 @@ class MapController: UIViewController {
     
     //abrir conexao no socket
     private func abrirConexaoSocket() {
-        
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url!), delegate: self, connectionHeaders: authorization)
     }
     
@@ -243,6 +254,8 @@ class MapController: UIViewController {
 
 extension MapController: MGLMapViewDelegate, NavigationViewControllerDelegate {
     
+    
+    
     // mostra os dados quando clica no ponto
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         return true
@@ -332,13 +345,16 @@ extension MapController: StompClientLibDelegate {
     
     //CONNECT
     func stompClientDidConnect(client: StompClientLib!) {
-        print("conectou")
         socketClient.subscribe(destination: "/user/topic/notificacoes")
     }
     
     
     
-    func stompClientDidDisconnect(client: StompClientLib!) {}
+    func stompClientDidDisconnect(client: StompClientLib!) {
+       // abrirConexaoSocket()
+    }
+    
+    
     func serverDidSendReceipt(client: StompClientLib!, withReceiptId receiptId: String) {}
     func serverDidSendError(client: StompClientLib!, withErrorMessage description: String, detailedErrorMessage message: String?) {
         bannners.MensagemErro("Stomp: \(description.uppercased())!")
@@ -424,8 +440,14 @@ extension MapController: UNUserNotificationCenterDelegate {
 extension MapController: CoordenadasEncomendasDelegate {
     
     func atualizarCoordenadas(_ NovasCoordenadas: CLLocationCoordinate2D) {
-        coordenadaDestino = NovasCoordenadas
-        mostrarRotaNoMapa()
+        if CLLocationCoordinate2DIsValid(NovasCoordenadas) {
+            coordenadaDestino = NovasCoordenadas
+            mostrarRotaNoMapa()
+        } else {
+            self.mensagem = "Coordenadas Inválidas!"
+            firstTime = false
+        }
+
     }
     
 }

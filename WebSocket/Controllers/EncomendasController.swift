@@ -32,6 +32,7 @@ class EncomendasController: UIViewController {
     private lazy var url = "https://motoboyentrega.begaentrega.com/api/encomendas/espera/estafeta"
     private lazy var banner = MensagemBanner()
     private lazy var apiRequest = APIService()
+    
     private var listaModel = [ListaModel]() {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -171,13 +172,15 @@ protocol CoordenadasEncomendasDelegate {
 
 extension EncomendasController: ListaEncomendasDelegate {
     func didStartRefreshing() {
-       
+        
     }
     
     func responseSucess() {
+       // self.refreshControl.beginRefreshing()
         DispatchQueue.main.async { [weak self] in
-            self?.refreshControl.endRefreshing()
+            //self?.refreshControl.endRefreshing()
             self?.banner.MensagemSucess()
+        
         }
     }
     
