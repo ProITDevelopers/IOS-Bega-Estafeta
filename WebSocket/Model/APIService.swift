@@ -174,11 +174,6 @@ struct APIService {
         switch estado {
         case "ESPERA":
             
-            if CLLocationCoordinate2DIsValid(coord!) {
-                
-            }
-            
-            
             banners.detalhesDaEncomenda(listaModel[indexPath.row])
             coord = CLLocationCoordinate2D(latitude: listaModel[indexPath.row].latitudeOrigem ?? 0.0, longitude: listaModel[indexPath.row].longitudeOrigem ?? 0.0)
              guard let coord = coord else {return}

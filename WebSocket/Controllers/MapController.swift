@@ -164,7 +164,8 @@ class MapController: UIViewController {
         //NOTIFICACOES
         UNUserNotificationCenter.current().requestAuthorization(options:
             [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
-                // Handle Error
+                print(granted)
+
         })
         UNUserNotificationCenter.current().delegate = self
     }
