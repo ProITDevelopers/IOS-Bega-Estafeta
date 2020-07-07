@@ -36,7 +36,7 @@ class MapController: UIViewController {
     var coordenadaDestino = CLLocationCoordinate2D(latitude:  -8.827515/*-8.827554*/, longitude: 13.228986 /*13.229368*/)
     
     private lazy var socketClient = StompClientLib()
-    private var url = URL(string: "https://motoboy.begaentrega.com/api-entrega/websocket")
+    private var url = URL(string: "http://52.14.171.89:8086/api-entrega/websocket")
     
     var mensagem = ""
     var firstTime = true
@@ -164,8 +164,6 @@ class MapController: UIViewController {
         //NOTIFICACOES
         UNUserNotificationCenter.current().requestAuthorization(options:
             [[.alert, .sound, .badge]], completionHandler: { (granted, error) in
-                print(granted)
-
         })
         UNUserNotificationCenter.current().delegate = self
     }
@@ -382,6 +380,7 @@ extension MapController: UNUserNotificationCenterDelegate {
         content.subtitle = subtitile
         content.body = body ?? ""
         content.badge = 0
+        content.sound = .default
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1,
                                                         repeats: false)
@@ -408,20 +407,21 @@ extension MapController: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         let application = UIApplication.shared
         let userInfo = response.notification.request.content
+        
         //background
         if(application.applicationState == .active){
-            print(userInfo.title)
-            print(userInfo.subtitle)
-            print(userInfo.body)
+           // print(userInfo.title)
+           // print(userInfo.subtitle)
+           // print(userInfo.body)
         }
         
         
         //foreground
         if(application.applicationState == .inactive)
         {
-            print(userInfo.title)
-            print(userInfo.subtitle)
-            print(userInfo.body)
+//            print(userInfo.title)
+//            print(userInfo.subtitle)
+//            print(userInfo.body)
         }
         
         

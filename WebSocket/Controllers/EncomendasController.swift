@@ -16,9 +16,9 @@ import SwiftMessages
 class EncomendasController: UIViewController {
     
     
-    private let urlEspera = "https://motoboyentrega.begaentrega.com/api/encomendas/espera/estafeta"
-    private let urlAndamento = "https://motoboyentrega.begaentrega.com/api/encomendas/andamento/estafeta"
-    private let urlEntregue = "https://motoboyentrega.begaentrega.com/api/encomendas/estafeta"
+    private let urlEspera = "http://52.14.171.89:8085/api/encomendas/espera/estafeta"
+    private let urlAndamento = "http://52.14.171.89:8085/api/encomendas/andamento/estafeta"
+    private let urlEntregue = "http://52.14.171.89:8085/api/encomendas/estafeta"
     public lazy var refreshControl = UIRefreshControl()
     
     @IBOutlet weak var estadosControl: UISegmentedControl!
@@ -29,7 +29,7 @@ class EncomendasController: UIViewController {
     
     
     private lazy var estado = "ESPERA"
-    private lazy var url = "https://motoboyentrega.begaentrega.com/api/encomendas/espera/estafeta"
+    private lazy var url = "http://52.14.171.89:8085/api/encomendas/espera/estafeta"
     private lazy var banner = MensagemBanner()
     private lazy var apiRequest = APIService()
     
@@ -207,9 +207,9 @@ extension EncomendasController: BannerDelegate {
     func confirmarEntregaCliente(_ pagamento: String, _ idEncomenda: String, _ json: [String : Any]) {
         switch pagamento {
         case "WALLET":
-            apiRequest.performPUTrequest("https://motoboyentrega.begaentrega.com/api/encomenda/\(idEncomenda)/pagamento/wallet/estafeta", nil, json)
+            apiRequest.performPUTrequest("http://52.14.171.89:8085/api/encomenda/\(idEncomenda)/pagamento/wallet/estafeta", nil, json)
         case "TPA":
-            apiRequest.performPUTrequest("https://motoboyentrega.begaentrega.com/api/encomenda/\(idEncomenda)/pagamento/tpa/estafeta", nil, json)
+            apiRequest.performPUTrequest("http://52.14.171.89:8085/api/encomenda/\(idEncomenda)/pagamento/tpa/estafeta", nil, json)
         default:
             return
         }
@@ -220,7 +220,7 @@ extension EncomendasController: BannerDelegate {
     
     func botaoConfirmar(_ idEncomenda: Int?) {
         guard let idEncomenda = idEncomenda else {return}
-        apiRequest.performPUTrequest("https://motoboyentrega.begaentrega.com/api/encomenda/andamento/estafeta", [["id" : idEncomenda]])
+        apiRequest.performPUTrequest("http://52.14.171.89:8085/api/encomenda/andamento/estafeta", [["id" : idEncomenda]])
     }
     
     func mostrarRota() {

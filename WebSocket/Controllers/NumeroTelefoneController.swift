@@ -13,7 +13,7 @@ import MBProgressHUD
 class NumeroTelefoneController: UIViewController {
     
     
-    private var url = "https://motoboyentrega.begaentrega.com/api/usuario/telefone"
+    private var url = "http://52.14.171.89:8085/api/usuario/telefone"
     let json = ["telefone": "928226458"]
     private lazy var apiService = APIService()
     private lazy var banners = MensagemBanner()

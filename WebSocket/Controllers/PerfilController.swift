@@ -26,7 +26,7 @@ class PerfilController: UIViewController {
     private lazy var apiService = APIService()
     private lazy var banner = MensagemBanner()
     private lazy var  keychain = KeychainSwift()
-    private let urlUser = "https://motoboyentrega.begaentrega.com/api/usuario/perfil"
+    private let urlUser = "http://52.14.171.89:8085/api/usuario/perfil"
     
     private var dados = PerfilModel() {
         didSet {

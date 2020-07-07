@@ -22,7 +22,7 @@ class LoginController: UIViewController {
     //brian@gmail.com,senha:brian@gmail.com
     private lazy var functions = Functions()
     private lazy var apiService = APIService()
-    private let url = "https://motoboy.begaentrega.com/api/login"
+    private let url = "http://52.14.171.89:8085/api/login"
     private lazy var UserCredentials = [String:Any]()
     private var errorMessage: String? {
         didSet{

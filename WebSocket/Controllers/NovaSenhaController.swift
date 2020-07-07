@@ -14,7 +14,7 @@ import MBProgressHUD
 class NovaSenhaController: UIViewController {
     
     
-    private var url = "https://motoboyentrega.begaentrega.com/api/usuario/codigo"
+    private var url = "http://52.14.171.89:8085/api/usuario/codigo"
     let json = ["codigo": "928226458"]
     private lazy var apiService = APIService()
     private lazy var banners = MensagemBanner()
